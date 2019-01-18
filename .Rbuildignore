@@ -1,3 +1,4 @@
+^\.zenodo\.json$
 ^README\.Rmd$
 ^\.travis\.yml$
 ^LICENSE\.md$
