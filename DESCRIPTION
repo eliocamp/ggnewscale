@@ -1,6 +1,6 @@
 Package: ggnewscale
 Title: Multiple Fill and Color Scales in `ggplot2`
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person(given = "Elio",
            family = "Campitelli",
@@ -8,6 +8,8 @@ Authors@R:
            email = "elio.campitelli@cima.fcen.uba.ar",
            comment = c(ORCID = "0000-0002-7742-9230"))
 Description: Use multiple fill and color scales in `ggplot2`.
+DOI: 10.5281/zenodo.2543745 
+Date: 2019-01-18
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
