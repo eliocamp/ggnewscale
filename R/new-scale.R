@@ -122,14 +122,16 @@ bump_aes_scales <- function(scales, new_aes) {
 
 bump_aes_scale <- function(scale, new_aes) {
   old_aes <- scale$aesthetics[remove_new(scale$aesthetics) %in% new_aes]
-  new_aes <- paste0(old_aes, "_new")
+  if (length(old_aes) != 0) {
+    new_aes <- paste0(old_aes, "_new")
 
-  scale$aesthetics[scale$aesthetics %in% old_aes] <- new_aes
+    scale$aesthetics[scale$aesthetics %in% old_aes] <- new_aes
 
-  if (is.character(scale$guide)) {
-    scale$guide <- match.fun(paste("guide_", scale$guide, sep = ""))()
+    if (is.character(scale$guide)) {
+      scale$guide <- match.fun(paste("guide_", scale$guide, sep = ""))()
+    }
+    scale$guide$available_aes[scale$guide$available_aes %in% old_aes] <- new_aes
   }
-  scale$guide$available_aes[scale$guide$available_aes %in% old_aes] <- new_aes
   scale
 }
 
