@@ -14,8 +14,15 @@ For another way of defining multiple scales, you can also try
 
 ## Installation
 
-Or you can install the development version from
-[GitHub](https://github.com/) with:
+`ggnewscale` is not on CRAN. You can install the latest release from
+[GitHub](https://github.com/) with
+
+``` r
+# install.packages("devtools")
+devtools::install_github("eliocamp/ggnewscale@v0.1.0")
+```
+
+Or you can install the latest commit with
 
 ``` r
 # install.packages("devtools")
