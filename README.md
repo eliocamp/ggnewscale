@@ -35,8 +35,8 @@ The main function is `new_scale()` and its aliases `new_scale_color()`
 and `new_scale_fill()`. When added to a plot, every geom added after
 them will use a different scale.
 
-As an example, lets overlay some measurements over a contour map of
-topography using the beloed `volcano`.
+As an example, let’s overlay some measurements over a contour map of
+topography using the beloved `volcano`.
 
 ``` r
 library(ggplot2)
