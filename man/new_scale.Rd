@@ -17,7 +17,7 @@ new_scale_colour()
 }
 \arguments{
 \item{new_aes}{A string with the name of the aesthetic for which a new scale
-swill be created.}
+will be created.}
 }
 \description{
 Creates a new scale "slot". Geoms added to a plot after this function will

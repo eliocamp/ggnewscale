@@ -4,7 +4,7 @@
 #' use a new scale definition.
 #'
 #' @param new_aes A string with the name of the aesthetic for which a new scale
-#' swill be created.
+#' will be created.
 #'
 #' @details
 #' `new_scale_color()`, `new_scale_colour()` and `new_scale_fill()` are just
