@@ -1,3 +1,4 @@
+^inst/CITATION$
 ^\.zenodo\.json$
 ^README\.Rmd$
 ^\.travis\.yml$

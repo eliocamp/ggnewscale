@@ -2,7 +2,7 @@ key <- paste0("R-", meta$Package)
 year <- sub("-.*", "", meta$Date)
 note <- sprintf("R package version %s", meta$Version)
 doi <- meta$DOI
-title <- paste0( meta$Package, ": ", meta$Title)
+title <- paste0(meta$Package, ": ", meta$Title)
 
 desc <- utils::packageDescription(meta$Package)
 
