@@ -1,3 +1,9 @@
+## Resubmission
+
+In this version I removed the DOI field in DESCRIPTION. 
+
+Thanks!
+
 ## Test environments
 
 * local instalation of elementary OS 5 Juno (based on Ubuntu 18.04.2) R version 3.5.3 (2019-03-11)
