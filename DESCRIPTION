@@ -9,7 +9,6 @@ Authors@R:
            email = "elio.campitelli@cima.fcen.uba.ar",
            comment = c(ORCID = "0000-0002-7742-9230"))
 Description: Use multiple fill and color scales in 'ggplot2'.
-DOI: 10.5281/zenodo.2543762
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
