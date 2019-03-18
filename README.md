@@ -4,7 +4,8 @@
 # ggnewscale
 
 [![Travis build
-status](https://travis-ci.org/eliocamp/ggnewscale.svg?branch=master)](https://travis-ci.org/eliocamp/ggnewscale)[![DOI](https://zenodo.org/badge/161934647.svg)](https://zenodo.org/badge/latestdoi/161934647)
+status](https://travis-ci.org/eliocamp/ggnewscale.svg?branch=master)](https://travis-ci.org/eliocamp/ggnewscale)[![DOI](https://zenodo.org/badge/161934647.svg)](https://zenodo.org/badge/latestdoi/161934647)[![CRAN
+status](http://www.r-pkg.org/badges/version/ggnewscale)](https://cran.r-project.org/package=ggnewscale)
 
 `ggnewscale` tries to make it painless to use multiple color and fill
 scales in `ggplot2`. It’s very experimental, so use at your own risk\!
@@ -14,15 +15,13 @@ For another way of defining multiple scales, you can also try
 
 ## Installation
 
-`ggnewscale` is not on CRAN. You can install the latest release from
-[GitHub](https://github.com/) with
+You can install ggnewscale from CRAN with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("eliocamp/ggnewscale@v0.1.0")
+install.packages("ggnewscale")
 ```
 
-Or you can install the latest commit with
+Or the developement version with:
 
 ``` r
 # install.packages("devtools")
