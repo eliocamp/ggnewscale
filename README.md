@@ -1,20 +1,16 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+ggnewscale
+==========
 
-# ggnewscale
+[![Travis build status](https://travis-ci.org/eliocamp/ggnewscale.svg?branch=master)](https://travis-ci.org/eliocamp/ggnewscale)[![DOI](https://zenodo.org/badge/161934647.svg)](https://zenodo.org/badge/latestdoi/161934647)[![CRAN status](http://www.r-pkg.org/badges/version/ggnewscale)](https://cran.r-project.org/package=ggnewscale)[![Say Thanks!](https://img.shields.io/badge/Say-Thanks!-a56de2.svg)](https://saythanks.io/to/eliocamp)
 
-[![Travis build
-status](https://travis-ci.org/eliocamp/ggnewscale.svg?branch=master)](https://travis-ci.org/eliocamp/ggnewscale)[![DOI](https://zenodo.org/badge/161934647.svg)](https://zenodo.org/badge/latestdoi/161934647)[![CRAN
-status](http://www.r-pkg.org/badges/version/ggnewscale)](https://cran.r-project.org/package=ggnewscale)[![Say
-Thanks\!](https://img.shields.io/badge/Say-Thanks!-3689e6.svg)](https://saythanks.io/to/eliocamp)
+`ggnewscale` tries to make it painless to use multiple color and fill scales in `ggplot2`. It's very experimental, so use at your own risk!
 
-`ggnewscale` tries to make it painless to use multiple color and fill
-scales in `ggplot2`. It’s very experimental, so use at your own risk\!
+For another way of defining multiple scales, you can also try [relayer](https://github.com/clauswilke/relayer).
 
-For another way of defining multiple scales, you can also try
-[relayer](https://github.com/clauswilke/relayer).
-
-## Installation
+Installation
+------------
 
 You can install ggnewscale from CRAN with:
 
@@ -29,14 +25,12 @@ Or the developement version with:
 devtools::install_github("eliocamp/ggnewscale")
 ```
 
-## Usage
+Usage
+-----
 
-The main function is `new_scale()` and its aliases `new_scale_color()`
-and `new_scale_fill()`. When added to a plot, every geom added after
-them will use a different scale.
+The main function is `new_scale()` and its aliases `new_scale_color()` and `new_scale_fill()`. When added to a plot, every geom added after them will use a different scale.
 
-As an example, let’s overlay some measurements over a contour map of
-topography using the beloved `volcano`.
+As an example, let's overlay some measurements over a contour map of topography using the beloved `volcano`.
 
 ``` r
 library(ggplot2)
