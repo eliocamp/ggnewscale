@@ -1,3 +1,10 @@
+# 0.2.0.9000
+
+
+## Bugfixes
+
+* `new_scale()` does not fail then `guide = "none"` or `guide = FALSE` (#6, thanks @Maschette)
+
 # ggnewscale 0.2.0 - C major
 
 ## Bugfixes
