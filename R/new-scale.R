@@ -73,7 +73,13 @@ bump_aes_layers <- function(layers, new_aes) {
 bump_aes_layer <- function(layer, new_aes) {
   original_aes <- new_aes
 
+  # Get explicit mapping
   old_aes <- names(layer$mapping)[remove_new(names(layer$mapping)) %in% new_aes]
+
+  # If not explicit, get the default
+  if (length(old_aes) == 0) {
+    old_aes <- names(layer$stat$default_aes)[remove_new(names(layer$stat$default_aes)) %in% new_aes]
+  }
   new_aes <- paste0(old_aes, "_new")
 
   old_geom <- layer$geom

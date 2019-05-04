@@ -3,7 +3,10 @@
 
 ## Bugfixes
 
-* `new_scale()` does not fail then `guide = "none"` or `guide = FALSE` (#6, thanks @Maschette)
+* `new_scale()` does not fail when `guide = "none"` or `guide = FALSE` (#6, thanks @Maschette)
+
+* `new_scale()` does not fail when using the default mapping (#7, thanks @
+RomanAbashin)
 
 # ggnewscale 0.2.0 - C major
 
