@@ -1,5 +1,8 @@
 # 0.2.0.9000
 
+## New features
+
+- New website at https://eliocamp.github.io/ggnewscale/
 
 ## Bugfixes
 
