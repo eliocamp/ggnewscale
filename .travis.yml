@@ -8,11 +8,8 @@ after_success:
   - Rscript -e 'devtools::install_github("eliocamp/ggnewscale")'
   - Rscript -e 'pkgdown::build_site()'
 
+before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_PAT
-  keep-history: true
-  local-dir: docs
-  on:
-    branch: master
+  provider: script
+  script: Rscript -e 'pkgdown::deploy_site_github()'
+  skip_cleanup: true
