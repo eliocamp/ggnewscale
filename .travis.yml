@@ -6,7 +6,6 @@ cache: packages
 
 after_success:
   - Rscript -e 'devtools::install_github("eliocamp/ggnewscale")'
-  - Rscript -e 'pkgdown::build_site()'
 
 before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
 deploy:
