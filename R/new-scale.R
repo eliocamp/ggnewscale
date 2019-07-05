@@ -61,7 +61,7 @@ new_scale_colour <- function() {
 ggplot_add.new_aes <- function(object, plot, object_name) {
   # To add default scales (I need to build the whole plot because they might be computed aesthetics)
   if (is.null(plot$scales$get_scales(object))) {
-    plot$scales <- ggplot_build(plot)$plot$scales
+    plot$scales <- ggplot2::ggplot_build(plot)$plot$scales
   }
 
   plot$layers <- bump_aes_layers(plot$layers, new_aes = object)
