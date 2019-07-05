@@ -1,8 +1,12 @@
-# 0.2.0.9000 - F mayor
+# 0.4.0.90000
+
+# 0.3.0 - F mayor
 
 ## New features
 
 - New website at https://eliocamp.github.io/ggnewscale/
+
+- `new_scale()` adds a default scale if not supplied.
 
 ## Bugfixes
 
@@ -11,7 +15,6 @@
 * `new_scale()` does not fail when using the default mapping (#7, thanks @
 RomanAbashin)
 
-* `new_scale()` adds a default scale if not supplied.
 
 # ggnewscale 0.2.0 - C major
 
