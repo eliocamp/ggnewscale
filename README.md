@@ -22,7 +22,7 @@ You can install ggnewscale from CRAN with:
 install.packages("ggnewscale")
 ```
 
-Or the developement version with:
+Or the development version with:
 
 ``` r
 # install.packages("devtools")
@@ -40,11 +40,6 @@ topography using the beloved `volcano`.
 
 ``` r
 library(ggplot2)
-#> Registered S3 methods overwritten by 'ggplot2':
-#>   method         from 
-#>   [.quosures     rlang
-#>   c.quosures     rlang
-#>   print.quosures rlang
 library(ggnewscale)
 # Equivalent to melt(volcano)
 topography <- expand.grid(x = 1:nrow(volcano),

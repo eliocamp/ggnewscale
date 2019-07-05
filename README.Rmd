@@ -27,7 +27,7 @@ You can install ggnewscale from CRAN with:
 install.packages("ggnewscale")
 ```
 
-Or the developement version with:
+Or the development version with:
 
 ```r
 # install.packages("devtools")
