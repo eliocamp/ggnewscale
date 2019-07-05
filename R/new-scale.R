@@ -60,7 +60,7 @@ new_scale_colour <- function() {
 #' @importFrom ggplot2 ggplot_add
 ggplot_add.new_aes <- function(object, plot, object_name) {
   # To add default scales (I need to build the whole plot because they might be computed aesthetics)
-  if (length(plot$scales$scales) == 0) {
+  if (is.null(plot$scales$get_scales(object))) {
     plot$scales <- ggplot_build(plot)$plot$scales
   }
 

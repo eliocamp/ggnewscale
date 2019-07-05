@@ -11,7 +11,7 @@
 * `new_scale()` does not fail when using the default mapping (#7, thanks @
 RomanAbashin)
 
-* `new_scale()` adds a default scale if not supplied
+* `new_scale()` adds a default scale if not supplied.
 
 # ggnewscale 0.2.0 - C major
 
