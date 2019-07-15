@@ -12,6 +12,7 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports:
-  ggplot2 (>= 3.0.0),
-  stringi
+    ggplot2 (>= 3.0.0),
+    stringi,
+    ggedit
 RoxygenNote: 6.1.1
