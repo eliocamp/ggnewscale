@@ -1,12 +1,5 @@
 # 0.4.0.90000
 
-
-## Bugfixes
-
-* Fixed compatibility with R versions lower than 3.5 (#12, thanks @raymondben).
-
-* Fixed modify by reference (#13, thanks @raymondben).
- 
 # 0.3.0 - F mayor
 
 ## New features

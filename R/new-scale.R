@@ -77,7 +77,7 @@ bump_aes_layers <- function(layers, new_aes) {
 
 bump_aes_layer <- function(layer, new_aes) {
   original_aes <- new_aes
-  layer <- ggedit::cloneLayer(layer)
+
   # Get explicit mapping
   old_aes <- names(layer$mapping)[remove_new(names(layer$mapping)) %in% new_aes]
 
