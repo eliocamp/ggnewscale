@@ -1,5 +1,11 @@
 # 0.4.0.90000
 
+## Bugfixes
+
+* `new_scale()` doesn't change plot by reference (#13, thanks @raymondben)
+
+* Fixed bug in R versions older than 3.5 (#12, thanks @raymondben)
+
 # 0.3.0 - F mayor
 
 ## New features

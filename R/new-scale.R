@@ -78,19 +78,21 @@ bump_aes_layers <- function(layers, new_aes) {
 bump_aes_layer <- function(layer, new_aes) {
   original_aes <- new_aes
 
+  new_layer <- ggplot2::ggproto(NULL, layer)
+
   # Get explicit mapping
-  old_aes <- names(layer$mapping)[remove_new(names(layer$mapping)) %in% new_aes]
+  old_aes <- names(new_layer$mapping)[remove_new(names(new_layer$mapping)) %in% new_aes]
 
   # If not explicit, get the default
   if (length(old_aes) == 0) {
-    old_aes <- names(layer$stat$default_aes)[remove_new(names(layer$stat$default_aes)) %in% new_aes]
+    old_aes <- names(new_layer$stat$default_aes)[remove_new(names(new_layer$stat$default_aes)) %in% new_aes]
     if (length(old_aes) == 0) {
-      old_aes <- names(layer$geom$default_aes)[remove_new(names(layer$geom$default_aes)) %in% new_aes]
+      old_aes <- names(new_layer$geom$default_aes)[remove_new(names(new_layer$geom$default_aes)) %in% new_aes]
     }
   }
   new_aes <- paste0(old_aes, "_new")
 
-  old_geom <- layer$geom
+  old_geom <- new_layer$geom
 
   old_setup <- old_geom$handle_na
   new_setup <- function(self, data, params) {
@@ -106,9 +108,9 @@ bump_aes_layer <- function(layer, new_aes) {
   new_geom$required_aes <- change_name(new_geom$required_aes, old_aes, new_aes)
   new_geom$optional_aes <- change_name(new_geom$optional_aes, old_aes, new_aes)
 
-  layer$geom <- new_geom
+  new_layer$geom <- new_geom
 
-  old_stat <- layer$stat
+  old_stat <- new_layer$stat
 
   old_setup2 <- old_stat$handle_na
   new_setup <- function(self, data, params) {
@@ -124,10 +126,10 @@ bump_aes_layer <- function(layer, new_aes) {
   new_stat$required_aes <- change_name(new_stat$required_aes, old_aes, new_aes)
   new_stat$optional_aes <- change_name(new_stat$optional_aes, old_aes, new_aes)
 
-  layer$stat <- new_stat
+  new_layer$stat <- new_stat
 
-  layer$mapping <- change_name(layer$mapping, old_aes, new_aes)
-  layer
+  new_layer$mapping <- change_name(new_layer$mapping, old_aes, new_aes)
+  new_layer
 }
 
 bump_aes_scales <- function(scales, new_aes) {
