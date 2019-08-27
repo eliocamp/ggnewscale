@@ -63,6 +63,12 @@ ggplot_add.new_aes <- function(object, plot, object_name) {
   if (is.null(plot$scales$get_scales(object))) {
     plot$scales <- ggplot2::ggplot_build(plot)$plot$scales
   }
+  # Global aes
+  old_aes <- names(plot$mapping)[remove_new(names(plot$mapping)) %in% object]
+  new_aes <- paste0(old_aes, "_new")
+  names(plot$mapping)[names(plot$mapping) == old_aes] <- new_aes
+
+
 
   plot$layers <- bump_aes_layers(plot$layers, new_aes = object)
   plot$scales$scales <- bump_aes_scales(plot$scales$scales, new_aes = object)

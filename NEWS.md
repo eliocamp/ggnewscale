@@ -8,6 +8,9 @@
 
 * Added support for aesthetics set outside `aes()` (#16, thanks @raymondben).
 
+* `new_scale()` will work with aesthetics defined in the global `ggplot()` call
+(#18, thanks @efratushava).
+
 # 0.3.0 - F mayor
 
 ## New features
