@@ -4,8 +4,11 @@
 # ggnewscale <img src='man/figures/logo.png' align="right" height="138.5" />
 
 [![Travis build
-status](https://travis-ci.org/eliocamp/ggnewscale.svg?branch=master)](https://travis-ci.org/eliocamp/ggnewscale)[![DOI](https://zenodo.org/badge/161934647.svg)](https://zenodo.org/badge/latestdoi/161934647)[![CRAN
-status](http://www.r-pkg.org/badges/version/ggnewscale)](https://cran.r-project.org/package=ggnewscale)[![Say
+status](https://travis-ci.org/eliocamp/ggnewscale.svg?branch=master)](https://travis-ci.org/eliocamp/ggnewscale)
+[![DOI](https://zenodo.org/badge/161934647.svg)](https://zenodo.org/badge/latestdoi/161934647)
+[![CRAN
+status](http://www.r-pkg.org/badges/version/ggnewscale)](https://cran.r-project.org/package=ggnewscale)
+[![Say
 Thanks\!](https://img.shields.io/badge/Say-Thanks!-a56de2.svg)](https://saythanks.io/to/eliocamp)
 
 `ggnewscale` tries to make it painless to use multiple color and fill
@@ -28,6 +31,11 @@ Or the development version with:
 # install.packages("devtools")
 devtools::install_github("eliocamp/ggnewscale")
 ```
+
+## Demo
+
+You can test the package in [this](https://bit.ly/ggnewscale-demo)
+RStudio Cloud instance without installing anything on your computer.
 
 ## Usage
 
