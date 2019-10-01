@@ -24,8 +24,8 @@ Creates a new scale "slot". Geoms added to a plot after this function will
 use a new scale definition.
 }
 \details{
-`new_scale_color()`, `new_scale_colour()` and `new_scale_fill()` are just
-aliases to `new_scale("color")`, etc...
+\code{new_scale_color()}, \code{new_scale_colour()} and \code{new_scale_fill()} are just
+aliases to \code{new_scale("color")}, etc...
 }
 \examples{
 library(ggplot2)

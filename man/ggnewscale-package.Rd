@@ -6,13 +6,15 @@
 \alias{ggnewscale-package}
 \title{ggnewscale: Multiple Fill and Color Scales in 'ggplot2'}
 \description{
+\if{html}{\figure{logo.png}{options: align='right'}}
+
 Use multiple fill and color scales in 'ggplot2'.
 }
 \section{Usage}{
 
 
 To have more than one colour or fill scale in a plot using ggplot2, you add a
-new scale slot with `new_scale()` and the following geoms will use a
+new scale slot with \link{new_scale} and the following geoms will use a
 different scale than the previous ones.
 }
 
