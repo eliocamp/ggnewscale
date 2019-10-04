@@ -1,4 +1,4 @@
-# 0.4.0.90000
+# 0.4.0 - G minor
 
 ## Bugfixes
 
@@ -10,6 +10,7 @@
 
 * `new_scale()` will work with aesthetics defined in the global `ggplot()` call
 (#18, thanks @efratushava).
+
 
 # 0.3.0 - F mayor
 
