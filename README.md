@@ -8,8 +8,6 @@ status](https://travis-ci.org/eliocamp/ggnewscale.svg?branch=master)](https://tr
 [![DOI](https://zenodo.org/badge/161934647.svg)](https://zenodo.org/badge/latestdoi/161934647)
 [![CRAN
 status](http://www.r-pkg.org/badges/version/ggnewscale)](https://cran.r-project.org/package=ggnewscale)
-[![Say
-Thanks\!](https://img.shields.io/badge/Say-Thanks!-a56de2.svg)](https://saythanks.io/to/eliocamp)
 
 `ggnewscale` tries to make it painless to use multiple color and fill
 scales in `ggplot2`. It’s very experimental, so use at your own risk\!
