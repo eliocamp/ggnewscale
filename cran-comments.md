@@ -1,3 +1,11 @@
+## Resubmission
+
+This is a resubmission. In this version I have:
+
+* Removed saythanks.io link. 
+
+Thanks for all the work!
+
 ## Test environments
 
 * local instalation of elementary OS 5 Juno (based on Ubuntu 18.04.2) R version 3.6.1
@@ -6,14 +14,5 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 notes
+0 errors | 0 warnings | 0 notes
 
-note on win-builder devel:
-Found the following (possibly) invalid URLs:
-  URL: https://saythanks.io/to/eliocamp
-    From: README.md
-    Status: Error
-    Message: libcurl error code 6:
-      	Could not resolve host: saythanks.io
-      	
-The site seems to be down at the moment. 
