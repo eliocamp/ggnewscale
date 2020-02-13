@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 
 [![Travis build status](https://travis-ci.org/eliocamp/ggnewscale.svg?branch=master)](https://travis-ci.org/eliocamp/ggnewscale) [![DOI](https://zenodo.org/badge/161934647.svg)](https://zenodo.org/badge/latestdoi/161934647) [![CRAN status](http://www.r-pkg.org/badges/version/ggnewscale)](https://cran.r-project.org/package=ggnewscale)
 
-`ggnewscale` tries to make it painless to use multiple color and fill scales in `ggplot2`. It's very experimental, so use at your own risk!
+`ggnewscale` tries to make it painless to use multiple colour and fill scales in `ggplot2`. It's very experimental, so use at your own risk!
 
 For another way of defining multiple scales, you can also try [relayer](https://github.com/clauswilke/relayer).
 

@@ -4,11 +4,11 @@
 \name{ggnewscale-package}
 \alias{ggnewscale}
 \alias{ggnewscale-package}
-\title{ggnewscale: Multiple Fill and Color Scales in 'ggplot2'}
+\title{ggnewscale: Multiple Fill and Colour Scales in 'ggplot2'}
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
-Use multiple fill and color scales in 'ggplot2'.
+Use multiple fill and colour scales in 'ggplot2'.
 }
 \section{Usage}{
 

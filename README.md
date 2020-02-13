@@ -9,7 +9,7 @@ status](https://travis-ci.org/eliocamp/ggnewscale.svg?branch=master)](https://tr
 [![CRAN
 status](http://www.r-pkg.org/badges/version/ggnewscale)](https://cran.r-project.org/package=ggnewscale)
 
-`ggnewscale` tries to make it painless to use multiple color and fill
+`ggnewscale` tries to make it painless to use multiple colour and fill
 scales in `ggplot2`. It’s very experimental, so use at your own risk\!
 
 For another way of defining multiple scales, you can also try
