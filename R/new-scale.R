@@ -194,5 +194,8 @@ change_name.NULL <- function(list, old, new) {
 
 
 remove_new <- function(aes) {
-  stringi::stri_replace_all(aes, "", regex = "(_new)*")
+  gsub("(_new)*", "", aes, fixed = FALSE)
+  # stringi::stri_replace_all(aes, "", regex = "(_new)*")
 }
+
+
