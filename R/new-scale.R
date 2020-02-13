@@ -143,6 +143,7 @@ bump_aes_scales <- function(scales, new_aes) {
   lapply(scales, bump_aes_scale, new_aes = new_aes)
 }
 
+#' @importFrom ggplot2 guide_colourbar guide_colorbar guide_legend
 bump_aes_scale <- function(scale, new_aes) {
   old_aes <- scale$aesthetics[remove_new(scale$aesthetics) %in% new_aes]
   if (length(old_aes) != 0) {
@@ -153,8 +154,7 @@ bump_aes_scale <- function(scale, new_aes) {
     no_guide <- isFALSE(scale$guide) | isTRUE(scale$guide == "none")
     if (!no_guide) {
       if (is.character(scale$guide)) {
-
-        scale$guide <- match.fun(paste("guide_", scale$guide, sep = ""))()
+        scale$guide <- get(paste0("guide_", scale$guide), mode = "function")()
       }
       scale$guide$available_aes[scale$guide$available_aes %in% old_aes] <- new_aes
     }

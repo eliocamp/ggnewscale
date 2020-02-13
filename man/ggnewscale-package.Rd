@@ -6,7 +6,7 @@
 \alias{ggnewscale-package}
 \title{ggnewscale: Multiple Fill and Color Scales in 'ggplot2'}
 \description{
-\if{html}{\figure{logo.png}{options: align='right'}}
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
 Use multiple fill and color scales in 'ggplot2'.
 }
@@ -19,7 +19,7 @@ different scale than the previous ones.
 }
 
 \author{
-\strong{Maintainer}: Elio Campitelli \email{elio.campitelli@cima.fcen.uba.ar} (0000-0002-7742-9230)
+\strong{Maintainer}: Elio Campitelli \email{elio.campitelli@cima.fcen.uba.ar} (\href{https://orcid.org/0000-0002-7742-9230}{ORCID})
 
 }
 \keyword{internal}

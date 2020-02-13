@@ -1,3 +1,9 @@
+# 0.5.9000
+
+## Bugfixes
+
+* Fixed error when adding a scale with `ggplot2` not loaded. (#21, thanks @rmendels)
+
 # 0.4.0 - G minor
 
 ## Bugfixes
