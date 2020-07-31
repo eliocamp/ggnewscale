@@ -1,10 +1,12 @@
 
 ## Test environments
 
-* local instalation of elementary OS 5.1 Hera (Built on Ubuntu 18.04.3 LTS) R version 3.6.2
+* local instalation of elementary OS 5.1.6 Hera (Built on Ubuntu 18.04.4 LTS) R version 4.0.2
+
 * win-builder 
-   - R version 3.6.2 (2019-12-12)
-   - R version 3.5.3 (2019-03-11)
+   - R version 3.6.3 (2020-02-29)
+   - R version 4.0.2 (2020-06-22)
+   
 * r-hub 
    - Windows Server 2008 R2 SP1, R-devel, 32/64 bit
    - Ubuntu Linux 16.04 LTS, R-release, GCC
