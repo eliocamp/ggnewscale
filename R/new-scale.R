@@ -114,13 +114,6 @@ bump_aes_layer <- function(layer, new_aes) {
   new_geom$required_aes <- change_name(new_geom$required_aes, old_aes, new_aes)
   new_geom$optional_aes <- change_name(new_geom$optional_aes, old_aes, new_aes)
 
-  use_defaults <- new_geom$use_defaults
-  new_geom$use_defaults <- function(...) {
-    data <- use_defaults(...)
-    colnames(data)[colnames(data) == new_aes] <- old_aes
-    data
-  }
-
   new_layer$geom <- new_geom
 
   old_stat <- new_layer$stat
