@@ -1,3 +1,10 @@
+# 0.4.2
+
+## Bugfixes
+
+* Fixed partial matching warning. (#24, thanks @hadley)
+
+
 # 0.4.1
 
 ## Bugfixes
