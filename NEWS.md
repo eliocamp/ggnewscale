@@ -1,3 +1,10 @@
+# 0.4.3
+
+## Bugfixes
+
+* Fixes partial matching warning properly this time (🤞️). (#24 #25, thanks @hadley and @ leesaudan2)
+
+
 # 0.4.2
 
 ## Bugfixes
