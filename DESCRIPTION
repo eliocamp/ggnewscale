@@ -1,7 +1,7 @@
 Package: ggnewscale
 Language: en-GB
 Title: Multiple Fill and Colour Scales in 'ggplot2'
-Version: 0.4.2
+Version: 0.4.3
 Authors@R: 
     person(given = "Elio",
            family = "Campitelli",
@@ -17,4 +17,5 @@ Imports:
 RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
 Suggests: 
-    testthat
+    testthat,
+    vdiffr
