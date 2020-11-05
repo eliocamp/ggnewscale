@@ -1,3 +1,9 @@
+# 0.4.4
+
+## Bugfixes 
+
+* Fixes incompatibility with stats with custom `setup_data` (#27, thanks @carlschmidt26 !)
+
 # 0.4.3
 
 ## Bugfixes

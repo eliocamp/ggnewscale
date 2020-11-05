@@ -42,3 +42,34 @@ test_that("doesn't do partial matching", {
 
   vdiffr::expect_doppelganger("guides2", g)
 })
+
+
+
+
+test_that("stats with custom `setup_data`", {
+  # Manipulate `setup_data()` of `StatYdensity` and store the object as `StatYdensity2`.
+  StatYdensity2 <- ggplot2::ggproto("StatYdensity2", StatYdensity,
+                                    setup_data = function (data, params) {
+                                      if (is.null(data[["fill"]])) {
+                                        stop("No fill column")
+                                      }
+                                      data
+                                    })
+
+  set.seed(5)
+
+  df <- data.frame(
+    x = floor(runif(100, min=1, max=5)),
+    y = floor(runif(100, min=1, max=10)),
+    gender = c("female", "male")[floor(runif(100, min=1, max=3))],
+    fill = floor(runif(100, min=1, max=5))
+  )
+  g <- ggplot(df, aes(x, y, group = interaction(x, gender))) +
+    # Call `geom_violin()` using the manipulated stat `StatYdensity2`.
+    geom_violin(stat = StatYdensity2, aes(fill = gender)) +
+    scale_fill_discrete() +
+    new_scale_fill() +
+    geom_point(aes(x, y, fill = fill), shape = 21, inherit.aes = F)
+  expect_error(print(g), NA)
+
+})
