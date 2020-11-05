@@ -100,14 +100,14 @@ bump_aes_layer <- function(layer, new_aes) {
 
   old_geom <- new_layer$geom
 
-  old_setup <- old_geom$handle_na
-  new_setup <- function(self, data, params) {
+  old_handle_na <- old_geom$handle_na
+  new_handle_na <- function(self, data, params) {
     colnames(data)[colnames(data) %in% new_aes] <- original_aes
-    old_setup(data, params)
+    old_handle_na(data, params)
   }
 
   new_geom <- ggplot2::ggproto(paste0("New", class(old_geom)[1]), old_geom,
-                               handle_na = new_setup)
+                               handle_na = new_handle_na)
 
   new_geom$default_aes <- change_name(new_geom$default_aes, old_aes, new_aes)
   new_geom$non_missing_aes <- change_name(new_geom$non_missing_aes, old_aes, new_aes)
@@ -125,14 +125,26 @@ bump_aes_layer <- function(layer, new_aes) {
 
   old_stat <- new_layer$stat
 
-  old_setup2 <- old_stat$handle_na
-  new_setup <- function(self, data, params) {
+
+  old_handle_na2 <- old_stat$handle_na
+  new_handle_na <- function(self, data, params) {
     colnames(data)[colnames(data) %in% new_aes] <- original_aes
-    old_setup2(data, params)
+    old_handle_na2(data, params)
   }
 
+  new_setup_data <- function(self, data, scales, ...) {
+    # After setup data, I need to go back to the new aes names, otherwise
+    # scales are not applied.
+    colnames(data)[colnames(data) %in% new_aes] <- original_aes
+    data <- old_stat$setup_data(data, scales, ...)
+    colnames(data)[colnames(data) %in% original_aes] <- new_aes
+    data
+  }
+
+
   new_stat <- ggplot2::ggproto(paste0("New", class(old_stat)[1]), old_stat,
-                               handle_na = new_setup)
+                               setup_data = new_setup_data,
+                               handle_na = new_handle_na)
 
   new_stat$default_aes <- change_name(new_stat$default_aes, old_aes, new_aes)
   new_stat$non_missing_aes <- change_name(new_stat$non_missing_aes, old_aes, new_aes)
