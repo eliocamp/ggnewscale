@@ -1,20 +1,30 @@
 
 ## Test environments
 
-* local instalation of elementary OS 5.1.6 Hera (Built on Ubuntu 18.04.4 LTS) R version 4.0.2
+* local installation of elementary OS 5.1.7 Hera (Built on Ubuntu 18.04.4 LTS Linux 4.15.0-122-generic)
 
-* win-builder 
-   - R Under development (unstable) (2020-08-23 r79071)
-   - R version 3.6.3 (2020-02-29)
-   
 * r-hub 
    - Windows Server 2008 R2 SP1, R-devel, 32/64 bit
+   - Fedora Linux, R-devel, clang, gfortran
+
+* winbuilder
+   - R version 4.0.3 (2020-10-10)
+   - R Under development (unstable) (2020-11-01 r79391)
+
   
-   
 ## R CMD check results
 
-0 errors | 0 warnings | 0 notes
+0 errors | 0 warnings | 1 notes
 
+
+Note (only on r-hub)
+Found the following (possibly) invalid URLs:
+  URL: https://bit.ly/ggnewscale-demo (moved to https://rstudio.cloud/project/574022)
+    From: README.md
+    Status: 200
+    Message: OK
+
+This is a false positive from a redirection. 
 
 All the best, 
 Elio
