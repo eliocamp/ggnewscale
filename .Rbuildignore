@@ -12,3 +12,4 @@
 ^pkgdown$
 ^revdep$
 ^\.github$
+^codecov\.yml$
