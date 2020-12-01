@@ -38,7 +38,7 @@ test_that("doesn't do partial matching", {
     geom_point(aes(colour = cyl == 4), size = 1, fill = NA) +
     scale_colour_manual("4 cylinder", values = c("grey60", "black"))
 
-  expect_warning(g, NA)
+  expect_warning(print(g), NA)
 
   vdiffr::expect_doppelganger("guides2", g)
 })
