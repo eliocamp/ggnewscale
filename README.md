@@ -3,11 +3,14 @@
 
 # ggnewscale <img src='man/figures/logo.png' align="right" height="138.5" />
 
-[![Travis build
-status](https://travis-ci.org/eliocamp/ggnewscale.svg?branch=master)](https://travis-ci.org/eliocamp/ggnewscale)
+<!-- badges: start -->
+
+[![R build
+status](https://github.com/eliocamp/ggnewscale/workflows/R-CMD-check/badge.svg)](https://github.com/eliocamp/ggnewscale/actions)
 [![DOI](https://zenodo.org/badge/161934647.svg)](https://zenodo.org/badge/latestdoi/161934647)
 [![CRAN
 status](http://www.r-pkg.org/badges/version/ggnewscale)](https://cran.r-project.org/package=ggnewscale)
+<!-- badges: end -->
 
 `ggnewscale` tries to make it painless to use multiple scales in
 `ggplot2`. Although originally intended to use with colour and fill, it
