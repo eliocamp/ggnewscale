@@ -125,26 +125,30 @@ bump_aes_layer <- function(layer, new_aes) {
 
   old_stat <- new_layer$stat
 
-
-  old_handle_na2 <- old_stat$handle_na
   new_handle_na <- function(self, data, params) {
     colnames(data)[colnames(data) %in% new_aes] <- original_aes
-    old_handle_na2(data, params)
+    ggplot2::ggproto_parent(self$super(), self)$handle_na(data, params)
   }
 
   new_setup_data <- function(self, data, scales, ...) {
     # After setup data, I need to go back to the new aes names, otherwise
     # scales are not applied.
     colnames(data)[colnames(data) %in% new_aes] <- original_aes
-    data <- old_stat$setup_data(data, scales, ...)
+    data <- ggplot2::ggproto_parent(self$super(), self)$setup_data(data, scales, ...)
     colnames(data)[colnames(data) %in% original_aes] <- new_aes
     data
   }
 
+  if (!is.null(old_stat$is_new)) {
+    parent <- old_stat$super()
+  } else {
+    parent <- ggplot2::ggproto(NULL, old_stat)
+  }
 
-  new_stat <- ggplot2::ggproto(paste0("New", class(old_stat)[1]), old_stat,
+  new_stat <- ggplot2::ggproto(paste0("New", class(old_stat)[1]), parent,
                                setup_data = new_setup_data,
-                               handle_na = new_handle_na)
+                               handle_na = new_handle_na,
+                               is_new = TRUE)
 
   new_stat$default_aes <- change_name(new_stat$default_aes, old_aes, new_aes)
   new_stat$non_missing_aes <- change_name(new_stat$non_missing_aes, old_aes, new_aes)
