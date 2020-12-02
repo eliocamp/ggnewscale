@@ -1,4 +1,4 @@
-# 0.4.4
+# ggnewscale 0.4.4
 
 ## Bugfixes 
 
