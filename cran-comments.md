@@ -1,4 +1,8 @@
 
+## Resubmission
+
+In this resubmission I've changed the problematic URL shown below
+
 ## Test environments
 
 * local installation of elementary OS 5.1.7 Hera (Built on Ubuntu 18.04.4 LTS Linux 4.15.0-124-generic) - R version 4.0.3 (2020-10-10)
