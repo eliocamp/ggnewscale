@@ -1,15 +1,15 @@
 
 ## Test environments
 
-* local installation of elementary OS 5.1.7 Hera (Built on Ubuntu 18.04.4 LTS Linux 4.15.0-122-generic)
+* local installation of elementary OS 5.1.7 Hera (Built on Ubuntu 18.04.4 LTS Linux 4.15.0-124-generic) - R version 4.0.3 (2020-10-10)
 
 * r-hub 
-   - Windows Server 2008 R2 SP1, R-devel, 32/64 bit
    - Fedora Linux, R-devel, clang, gfortran
-
+   - Windows Server 2008 R2 SP1, R-devel, 32/64 bit
+   
 * winbuilder
-   - R version 4.0.3 (2020-10-10)
-   - R Under development (unstable) (2020-11-01 r79391)
+   - R Under development (unstable) (2020-11-27 r79522)
+
 
   
 ## R CMD check results
