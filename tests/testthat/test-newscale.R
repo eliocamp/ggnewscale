@@ -15,6 +15,7 @@ test_that("works when ggplot2 not loaded", {
 })
 
 test_that("guides work", {
+  skip_if_not_installed("vdiffr")
   # from https://github.com/eliocamp/ggnewscale/issues/25
   g <- ggplot(mtcars) + aes(mpg, disp) +
     geom_point(aes(colour=factor(cyl)),  size=7) +
@@ -28,7 +29,7 @@ test_that("guides work", {
 })
 
 test_that("doesn't do partial matching", {
-
+  skip_if_not_installed("vdiffr")
   # from https://github.com/eliocamp/ggnewscale/issues/24
   options(warnPartialMatchDollar = TRUE)
   g <- ggplot(mpg, aes(displ, hwy)) +
@@ -77,6 +78,7 @@ test_that("stats with custom `setup_data`", {
 
 
 test_that("works with many layers", {
+  skip_if_not_installed("vdiffr")
   # from https://github.com/eliocamp/ggnewscale/issues/29
   data <- expand.grid(y = 1:4, x = 1:4)
   data$z <- c("a", "b")
