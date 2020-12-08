@@ -1,4 +1,6 @@
-# ggnewscale (development version)
+# ggnewscale 0.4.5
+
+* Necessary version change due to some CRAN stuff. No user-visible changes.  
 
 # ggnewscale 0.4.4
 
