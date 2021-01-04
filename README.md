@@ -39,7 +39,7 @@ devtools::install_github("eliocamp/ggnewscale")
 
 ## Demo
 
-You can test the package in [this](https://bit.ly/ggnewscale-demo)
+You can test the package in [this]()
 RStudio Cloud instance without installing anything on your computer.
 
 ## Usage
