@@ -30,7 +30,7 @@ status](http://www.r-pkg.org/badges/version/ggnewscale)](https://cran.r-project.
 
 For another way of defining multiple scales, you can also try [relayer](https://github.com/clauswilke/relayer).
 
-## Installation
+## How to install
 
 You can install ggnewscale from CRAN with:
 
@@ -44,9 +44,34 @@ Or the development version with:
 # install.packages("devtools")
 devtools::install_github("eliocamp/ggnewscale")
 ```
-## Demo
 
-You can test the package in [this](https://rstudio.cloud/project/574022) RStudio Cloud instance without installing anything on your computer. 
+## How to cite
+
+If you use ggnewscale in a publication, I'll be grateful if you cited it. To get the suggested citation for this (and any other R package) you can use:
+
+```{r}
+citation("ggnewscale")
+```
+
+If you use knitr, [you can automate this](https://bookdown.org/yihui/rmarkdown-cookbook/write-bib.html) with
+
+```r
+knitr::write_bib(c("ggnewscale"), "packages.bib")
+```
+
+And then add citations with `@R-ggnewscale`.
+
+
+<details>
+ <summary>Click to see a list of some publications that have cited ggnewscale. Thanks!</summary>
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+bib <- "ggnewscale-cited.bib"
+
+RefManageR::ReadBib(bib)
+```
+</details>
+
 
 ## Usage
 
