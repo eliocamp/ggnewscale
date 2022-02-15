@@ -42,7 +42,7 @@ Or the development version with:
 
 ```r
 # install.packages("devtools")
-devtools::install_github("eliocamp/ggnewscale")
+devtools::install_github("eliocamp/ggnewscale@dev")
 ```
 
 ## How to cite
