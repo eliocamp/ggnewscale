@@ -25,6 +25,7 @@ test_that("guides work", {
     scale_colour_brewer(palette='Set1')
 
   vdiffr::expect_doppelganger("guides", g)
+
   # from https://github.com/eliocamp/ggnewscale/issues/39
   g <- ggplot(head(iris, 10), aes(Sepal.Length, Sepal.Width)) +
     geom_point(aes(color = factor(Petal.Length))) +

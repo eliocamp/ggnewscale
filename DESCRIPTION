@@ -12,7 +12,6 @@ Authors@R:
 Description: Use multiple fill and colour scales in 'ggplot2'.
 License: GPL-3
 Encoding: UTF-8
-LazyData: true
 Imports:
   ggplot2 (>= 3.0.0)
 RoxygenNote: 7.1.1
