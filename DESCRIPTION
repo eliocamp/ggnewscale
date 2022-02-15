@@ -2,7 +2,7 @@ Package: ggnewscale
 Language: en-GB
 Date: 2022-02-15
 Title: Multiple Fill and Colour Scales in 'ggplot2'
-Version: 0.4.6
+Version: 0.4.6.9000
 Authors@R: 
     person(given = "Elio",
            family = "Campitelli",
