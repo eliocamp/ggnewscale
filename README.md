@@ -48,7 +48,7 @@ citation("ggnewscale")
 #> 
 #> To cite ggnewscale in publications use:
 #> 
-#> Campitelli E (2021). _ggnewscale: Multiple Fill and Colour Scales in
+#> Campitelli E (2022). _ggnewscale: Multiple Fill and Colour Scales in
 #> 'ggplot2'_. doi: 10.5281/zenodo.2543762 (URL:
 #> https://doi.org/10.5281/zenodo.2543762), R package version 0.4.6.
 #> 
@@ -57,7 +57,7 @@ citation("ggnewscale")
 #>   @Manual{R-ggnewscale,
 #>     title = {ggnewscale: Multiple Fill and Colour Scales in 'ggplot2'},
 #>     author = {Elio Campitelli},
-#>     year = {2021},
+#>     year = {2022},
 #>     note = {R package version 0.4.6},
 #>     doi = {10.5281/zenodo.2543762},
 #>   }
