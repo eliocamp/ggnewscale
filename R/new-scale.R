@@ -68,12 +68,25 @@ ggplot_add.new_aes <- function(object, plot, object_name) {
   new_aes <- paste0(old_aes, "_new")
   names(plot$mapping)[names(plot$mapping) == old_aes] <- new_aes
 
-
-
   plot$layers <- bump_aes_layers(plot$layers, new_aes = object)
   plot$scales$scales <- bump_aes_scales(plot$scales$scales, new_aes = object)
   plot$labels <- bump_aes_labels(plot$labels, new_aes = object)
+  plot$guides <- bump_aes_guides(plot$guides, new_aes = object)
+
   plot
+}
+
+
+bump_aes_guides <- function(guides, new_aes) {
+  original_aes <- new_aes
+
+  to_change <- remove_new(names(guides)) == original_aes
+
+  if (any(to_change)) {
+    names(guides)[to_change] <- paste0(names(guides), "_new")
+  }
+
+  return(guides)
 }
 
 bump_aes_layers <- function(layers, new_aes) {

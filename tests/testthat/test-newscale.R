@@ -26,6 +26,14 @@ test_that("guides work", {
 
   vdiffr::expect_doppelganger("guides", g)
 
+  g <- ggplot(head(iris, 10), aes(Sepal.Length, Sepal.Width)) +
+    geom_point(aes(color = factor(Petal.Length))) +
+    guides(color = guide_legend(ncol = 2, nrow = 2)) +
+    new_scale_colour() +
+    geom_point(aes(color = factor(Petal.Width))) +
+    guides(color = guide_legend(ncol = 1, nrow = 4))
+
+  vdiffr::expect_doppelganger("guides outisde of scales", g)
 })
 
 test_that("doesn't do partial matching", {
