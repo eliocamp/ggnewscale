@@ -13,3 +13,4 @@
 ^revdep$
 ^\.github$
 ^codecov\.yml$
+^ggnewscale-cited\.bib$
