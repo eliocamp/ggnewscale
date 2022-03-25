@@ -11,10 +11,12 @@ Authors@R:
            comment = c(ORCID = "0000-0002-7742-9230"))
 Description: Use multiple fill and colour scales in 'ggplot2'.
 License: GPL-3
+Url: https://eliocamp.github.io/ggnewscale/
+Bugs: https://github.com/eliocamp/ggnewscale/issues
 Encoding: UTF-8
 Imports:
   ggplot2 (>= 3.0.0)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Roxygen: list(markdown = TRUE)
 Suggests: 
     testthat,
