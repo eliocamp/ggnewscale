@@ -32,7 +32,7 @@ For another way of defining multiple scales, you can also try [relayer](https://
 
 ## How to install
 
-You can install ggnewscale from CRAN with:
+You can install ggnewscale from CRAN with: 
 
 ```{r CRAN-installation, eval = FALSE}
 install.packages("ggnewscale")
