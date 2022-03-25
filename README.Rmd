@@ -1,5 +1,6 @@
 ---
 output: github_document
+knit: (function(input, ...) devtools::build_readme())
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -13,7 +14,6 @@ knitr::opts_chunk$set(
 ```
 # ggnewscale <img src='man/figures/logo.png' align="right" height="138.5" />
 
- 
 <!-- badges: start -->
 
 [![R build
@@ -32,7 +32,7 @@ For another way of defining multiple scales, you can also try [relayer](https://
 
 ## How to install
 
-You can install ggnewscale from CRAN with: 
+You can install ggnewscale from CRAN with:
 
 ```{r CRAN-installation, eval = FALSE}
 install.packages("ggnewscale")
