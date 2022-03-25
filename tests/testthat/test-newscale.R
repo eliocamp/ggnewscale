@@ -107,3 +107,22 @@ test_that("works with many layers", {
 
   vdiffr::expect_doppelganger("many_layers", g)
 })
+
+
+test_that("changes override.aes", {
+  skip_if_not_installed("vdiffr")
+  # from https://github.com/r-lib/vdiffr/issues/98
+  p2 <- ggplot(mtcars, aes(factor(gear), mpg, color = factor(gear))) +
+    geom_boxplot() +
+    scale_color_brewer(type = "qual",
+                       aesthetics = c("fill", "color"),
+                       guide = guide_legend(
+                         override.aes = list(
+                           fill = c("red", "blue", "blue")
+                         )))
+
+  vdiffr::expect_doppelganger("respects override.aes", p2 + new_scale_fill())
+  vdiffr::expect_doppelganger("respects override.aes 2", p2 + new_scale_fill() + new_scale_color())
+
+
+})

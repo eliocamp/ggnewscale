@@ -193,6 +193,11 @@ bump_aes_scale <- function(scale, new_aes) {
         scale$guide <- get(paste0("guide_", scale$guide), mode = "function")()
       }
       scale$guide$available_aes[scale$guide$available_aes %in% old_aes] <- new_aes
+
+      if (!is.null(scale$guide$override.aes)) {
+        names(scale$guide$override.aes)[names(scale$guide$override.aes) == old_aes] <- new_aes
+      }
+
     }
   }
 
