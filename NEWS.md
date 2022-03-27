@@ -4,7 +4,7 @@
 
 ## Bugfixes
 
--   `new_scale()` respects `override.aes` arguments (#98, thanks @jgabry)
+-   `new_scale()` respects `override.aes` arguments (#43, thanks @jgabry)
 
 # ggnewscale 0.4.6
 
