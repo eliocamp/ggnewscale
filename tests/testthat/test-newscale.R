@@ -19,20 +19,20 @@ test_that("guides work", {
   # from https://github.com/eliocamp/ggnewscale/issues/25
   g <- ggplot(mtcars) + aes(mpg, disp) +
     geom_point(aes(colour=factor(cyl)),  size=7) +
-    scale_colour_brewer(type='qual') +
+    scale_colour_brewer(type='qual', guide = guide_legend(order = 0)) +
     new_scale_colour() +
     geom_point(aes(colour=factor(gear)), size=3) +
-    scale_colour_brewer(palette='Set1')
+    scale_colour_brewer(palette='Set1', guide = guide_legend(order = 0))
 
   vdiffr::expect_doppelganger("guides", g)
 
   # from https://github.com/eliocamp/ggnewscale/issues/39
   g <- ggplot(head(iris, 10), aes(Sepal.Length, Sepal.Width)) +
     geom_point(aes(color = factor(Petal.Length))) +
-    guides(color = guide_legend(ncol = 2, nrow = 2)) +
+    guides(color = guide_legend(ncol = 2, nrow = 2, order = 0)) +
     new_scale_colour() +
     geom_point(aes(color = factor(Petal.Width))) +
-    guides(color = guide_legend(ncol = 1, nrow = 4))
+    guides(color = guide_legend(ncol = 1, nrow = 4, order = 1))
 
   vdiffr::expect_doppelganger("guides outisde of scales", g)
 })
@@ -43,10 +43,10 @@ test_that("doesn't do partial matching", {
   options(warnPartialMatchDollar = TRUE)
   g <- ggplot(mpg, aes(displ, hwy)) +
     geom_point(aes(colour = factor(year)), size = 5) +
-    scale_colour_brewer("year", type = "qual", palette = 5) +
+    scale_colour_brewer("year", type = "qual", palette = 5, guide = guide_legend(order = 0)) +
     new_scale_colour() +
     geom_point(aes(colour = cyl == 4), size = 1, fill = NA) +
-    scale_colour_manual("4 cylinder", values = c("grey60", "black"))
+    scale_colour_manual("4 cylinder", values = c("grey60", "black"), guide = guide_legend(order = 1))
 
   expect_warning(print(g), NA)
 
@@ -78,9 +78,10 @@ test_that("stats with custom `setup_data`", {
   g <- ggplot(df, aes(x, y, group = interaction(x, gender))) +
     # Call `geom_violin()` using the manipulated stat `StatYdensity2`.
     geom_violin(stat = StatYdensity2, aes(fill = gender)) +
-    scale_fill_discrete() +
+    scale_fill_discrete(guide = guide_legend(order = 0)) +
     new_scale_fill() +
-    geom_point(aes(x, y, fill = fill), shape = 21, inherit.aes = F)
+    geom_point(aes(x, y, fill = fill), shape = 21, inherit.aes = F) +
+    scale_fill_continuous(guide = guide_colorbar(order = 1))
   expect_error(print(g), NA)
 
 })
