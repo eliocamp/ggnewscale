@@ -1,4 +1,6 @@
-# ggnewscale (development version)
+# ggnewscale 0.4.8
+
+-   Updates documentation to conform to latest CRAN HTML5 requirements.
 
 # ggnewscale 0.4.7
 

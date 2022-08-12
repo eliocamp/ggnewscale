@@ -6,7 +6,7 @@
 \alias{ggnewscale-package}
 \title{ggnewscale: Multiple Fill and Colour Scales in 'ggplot2'}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
 Use multiple fill and colour scales in 'ggplot2'.
 }

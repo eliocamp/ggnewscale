@@ -16,7 +16,7 @@ Bugs: https://github.com/eliocamp/ggnewscale/issues
 Encoding: UTF-8
 Imports:
   ggplot2 (>= 3.0.0)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 Roxygen: list(markdown = TRUE)
 Suggests: 
     testthat,
