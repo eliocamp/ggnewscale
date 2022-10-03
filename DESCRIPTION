@@ -1,6 +1,6 @@
 Package: ggnewscale
 Language: en-GB
-Date: 2022-03-25
+Date: 2022-10-03
 Title: Multiple Fill and Colour Scales in 'ggplot2'
 Version: 0.4.8
 Authors@R: 
@@ -11,8 +11,8 @@ Authors@R:
            comment = c(ORCID = "0000-0002-7742-9230"))
 Description: Use multiple fill and colour scales in 'ggplot2'.
 License: GPL-3
-Url: https://eliocamp.github.io/ggnewscale/
-Bugs: https://github.com/eliocamp/ggnewscale/issues
+URL: https://eliocamp.github.io/ggnewscale/
+BugReports: https://github.com/eliocamp/ggnewscale/issues
 Encoding: UTF-8
 Imports:
   ggplot2 (>= 3.0.0)

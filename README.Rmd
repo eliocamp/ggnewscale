@@ -16,7 +16,6 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
-
 [![R build
 status](https://github.com/eliocamp/ggnewscale/workflows/R-CMD-check/badge.svg)](https://github.com/eliocamp/ggnewscale/actions)
 [![Codecov test
