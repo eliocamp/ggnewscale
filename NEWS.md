@@ -1,3 +1,7 @@
+# ggnewscale 0.4.8
+
+-   Redocument to fix HTML5 warning on CRAN. No user-visible changes (@jonthegeek).
+
 # ggnewscale 0.4.7
 
 ## Bugfixes
