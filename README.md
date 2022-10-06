@@ -119,9 +119,8 @@ Organelle Gene Retention”. In: *Cell Systems* (Sep. 16, 2022). ISSN:
 \[6\] B. D. Golas, B. Goodell, and C. T. Webb. “Host Adaptation to Novel
 Pathogen Introduction: Predicting Conditions That Promote Evolutionary
 Rescue”. In: *Ecology Letters* 24.10 (2021), pp. 2238-2255. ISSN:
-1461-0248. DOI: 10.1111/ele.13845.
-<https://onlinelibrary.wiley.com/doi/abs/10.1111/ele.13845> (visited on
-03/25/2022).
+1461-0248. DOI: 10.1111/ele.13845. <https://doi.org/10.1111/ele.13845>
+(visited on 03/25/2022).
 
 \[7\] M. C. Granovetter, L. Ettensohn, and M. Behrmann. “With Childhood
 Hemispherectomy, One Hemisphere Can Support—But Is Suboptimal for—Word
@@ -190,8 +189,7 @@ p. 144612. ISSN: 0048-9697. DOI: 10.1016/j.scitotenv.2020.144612.
 Sibling Cooperation in Presence and Absence of Parental Care in a Genus
 with Interspecific Variation in Offspring Dependence”. In: *Evolution*
 76.2 (2022), pp. 320-331. ISSN: 1558-5646. DOI: 10.1111/evo.14414.
-<https://onlinelibrary.wiley.com/doi/abs/10.1111/evo.14414> (visited on
-03/25/2022).
+<https://doi.org/10.1111/evo.14414> (visited on 03/25/2022).
 
 \[17\] J. M. Quilty, A. E. Sikorska-Senoner, and D. Hah. “A Stochastic
 Conceptual-Data-Driven Approach for Improved Hydrological Simulations”.
@@ -200,99 +198,105 @@ ISSN: 1364-8152. DOI: 10.1016/j.envsoft.2022.105326.
 <https://www.sciencedirect.com/science/article/pii/S1364815222000329>
 (visited on 01/19/2022).
 
-\[18\] A. Rutz, M. Sorokina, J. Galgonek, et al. “Open Natural Products
+\[18\] H. Rodenhizer, F. Belshe, G. Celis, et al. “Abrupt Permafrost
+Thaw Accelerates Carbon Dioxide and Methane Release at a Tussock Tundra
+Site”. In: *Arctic, Antarctic, and Alpine Research* 54.1 (Dec. 31,
+2022), pp. 443-464. ISSN: 1523-0430. DOI: 10.1080/15230430.2022.2118639.
+<https://doi.org/10.1080/15230430.2022.2118639> (visited on 10/04/2022).
+
+\[19\] A. Rutz, M. Sorokina, J. Galgonek, et al. “Open Natural Products
 Research: Curation and Dissemination of Biological Occurrences of
 Chemical Structures through Wikidata”. In: *bioRxiv* (Mar. 01, 2021),
 p. 2021.02.28.433265. DOI: 10.1101/2021.02.28.433265.
 <https://www.biorxiv.org/content/10.1101/2021.02.28.433265v1> (visited
 on 03/07/2021).
 
-\[19\] M. R. Scharn, M. C. G. Brachmann, M. A. Patchett, et al.
+\[20\] M. R. Scharn, M. C. G. Brachmann, M. A. Patchett, et al.
 *Vegetation Responses to 26 Years of Warming at Latnjajaure Field
 Station, Northern Sweden.* <https://doi.org/10.1139/AS-2020-0042>. Apr.
 01, 2021. <https://cdnsciencepub.com/doi/abs/10.1139/AS-2020-0042>
 (visited on 04/05/2021).
 
-\[20\] L. Seep, Z. Razaghi-Moghadam, and Z. Nikoloski. “Reaction Lumping
+\[21\] L. Seep, Z. Razaghi-Moghadam, and Z. Nikoloski. “Reaction Lumping
 in Metabolic Networks for Application with Thermodynamic Metabolic Flux
 Analysis”. In: *Scientific Reports* 11.1 (1 Apr. 20, 2021), p. 8544.
 ISSN: 2045-2322. DOI: 10.1038/s41598-021-87643-8.
 <https://www.nature.com/articles/s41598-021-87643-8> (visited on
 04/23/2021).
 
-\[21\] O. Seppälä. “Spatial and Temporal Drivers of Soil Respiration in
+\[22\] O. Seppälä. “Spatial and Temporal Drivers of Soil Respiration in
 a Tundra Environment”. MA Thesis. FACULTY OF SCIENCE DEPARTMENT OF
 GEOSCIENCES AND GEOGRAPHY GEOGRAPHY: UNIVERSITY OF HELSINKI, 2020.
 
-\[22\] L. Shah, C. A. Arnillas, and G. B. Arhonditsis. “Characterizing
+\[23\] L. Shah, C. A. Arnillas, and G. B. Arhonditsis. “Characterizing
 Temporal Trends of Meteorological Extremes in Southern and Central
 Ontario, Canada”. In: *Weather and Climate Extremes* (Jan. 25, 2022),
 p. 100411. ISSN: 2212-0947. DOI: 10.1016/j.wace.2022.100411.
 <https://www.sciencedirect.com/science/article/pii/S2212094722000056>
 (visited on 01/29/2022).
 
-\[23\] C. C. Smith, S. Entwistle, C. Willis, et al. “Landscape and
+\[24\] C. C. Smith, S. Entwistle, C. Willis, et al. “Landscape and
 Selection of Vaccine Epitopes in SARS-CoV-2”. In: *bioRxiv* (Jun. 04,
 2020). DOI: 10.1101/2020.06.04.135004. pmid: 32577654.
 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7302209/> (visited on
 03/03/2021).
 
-\[24\] S. N. Thiede, E. S. Snitkin, W. Trick, et al. “Genomic
+\[25\] S. N. Thiede, E. S. Snitkin, W. Trick, et al. “Genomic
 Epidemiology Suggests Community Origins of Healthcare-Associated USA300
 MRSA”. In: *The Journal of Infectious Diseases* (Feb. 16, 2022), p.
 jiac056. ISSN: 0022-1899. DOI: 10.1093/infdis/jiac056.
 <https://doi.org/10.1093/infdis/jiac056> (visited on 02/26/2022).
 
-\[25\] A. Torres-Espín, A. Chou, J. R. Huie, et al. “Reproducible
+\[26\] A. Torres-Espín, A. Chou, J. R. Huie, et al. “Reproducible
 Analysis of Disease Space via Principal Components Using the Novel R
 Package syndRomics”. In: *eLife* 10 (Jan. 14, 2021). Ed. by M. Zaidi and
 M. Barton, p. e61812. ISSN: 2050-084X. DOI: 10.7554/eLife.61812.
 <https://doi.org/10.7554/eLife.61812> (visited on 03/03/2021).
 
-\[26\] K. Tougeron and C. Iltis. “Impact of Heat Stress on the Fitness
+\[27\] K. Tougeron and C. Iltis. “Impact of Heat Stress on the Fitness
 Outcomes of Symbiotic Infection in Aphids: A Meta-Analysis”. In:
 *EcoEvoRxiv* (Mar. 25, 2022). DOI: 10.32942/osf.io/nxdaw.
 <https://ecoevorxiv.org/nxdaw/> (visited on 03/25/2022).
 
-\[27\] L. Weidenauer and M. Quadroni. “Phosphorylation in the Charged
+\[28\] L. Weidenauer and M. Quadroni. “Phosphorylation in the Charged
 Linker Modulates Interactions and Secretion of Hsp90β”. In: *Cells* 10.7
 (7 Jul. 2021), p. 1701. DOI: 10.3390/cells10071701.
 <https://www.mdpi.com/2073-4409/10/7/1701> (visited on 07/08/2021).
 
-\[28\] D. Wendisch, O. Dietrich, T. Mari, et al. “SARS-CoV-2 Infection
+\[29\] D. Wendisch, O. Dietrich, T. Mari, et al. “SARS-CoV-2 Infection
 Triggers Profibrotic Macrophage Responses and Lung Fibrosis”. In: *Cell*
 (Nov. 27, 2021). ISSN: 0092-8674. DOI: 10.1016/j.cell.2021.11.033.
 <https://www.sciencedirect.com/science/article/pii/S0092867421013830>
 (visited on 12/11/2021).
 
-\[29\] R. J. Wright, M. G. I. Langille, and T. R. Walker. “Food or Just
+\[30\] R. J. Wright, M. G. I. Langille, and T. R. Walker. “Food or Just
 a Free Ride? A Meta-Analysis Reveals the Global Diversity of the
 Plastisphere”. In: *The ISME Journal* 15.3 (3 Mar. 2021), pp. 789-806.
 ISSN: 1751-7370. DOI: 10.1038/s41396-020-00814-9.
 <https://www.nature.com/articles/s41396-020-00814-9> (visited on
 03/03/2021).
 
-\[30\] T. Wyenberg-Henzler, R. T. Patterson, and J. C. Mallon.
+\[31\] T. Wyenberg-Henzler, R. T. Patterson, and J. C. Mallon.
 “Ontogenetic Dietary Shifts in North American Hadrosaurids”. In:
 *Cretaceous Research* (Feb. 23, 2022), p. 105177. ISSN: 0195-6671. DOI:
 10.1016/j.cretres.2022.105177.
 <https://www.sciencedirect.com/science/article/pii/S0195667122000416>
 (visited on 02/26/2022).
 
-\[31\] A. Yan, J. Butcher, D. Mack, et al. “Virome Sequencing of the
+\[32\] A. Yan, J. Butcher, D. Mack, et al. “Virome Sequencing of the
 Human Intestinal Mucosal–Luminal Interface”. In: *Frontiers in Cellular
 and Infection Microbiology* 10 (Oct. 22, 2020). ISSN: 2235-2988. DOI:
 10.3389/fcimb.2020.582187. pmid: 33194818.
 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7642909/> (visited on
 03/03/2021).
 
-\[32\] P. Zannini, F. Frascaroli, J. Nascimbene, et al. “Sacred Natural
+\[33\] P. Zannini, F. Frascaroli, J. Nascimbene, et al. “Sacred Natural
 Sites and Biodiversity Conservation: A Systematic Review”. In:
 *Biodiversity and Conservation* (Sep. 30, 2021). ISSN: 1572-9710. DOI:
 10.1007/s10531-021-02296-3. <https://doi.org/10.1007/s10531-021-02296-3>
 (visited on 10/04/2021).
 
-\[33\] H. L. Zhang, K. J. Gontjes, J. H. Han, et al. “Characterization
+\[34\] H. L. Zhang, K. J. Gontjes, J. H. Han, et al. “Characterization
 of Resistance to Newer Antimicrobials among Carbapenem-Resistant
 Klebsiella Pneumoniae in the Post–Acute-Care Setting”. In: *Infection
 Control & Hospital Epidemiology* (Jul. 28, 2022), pp. 1-4. ISSN:
