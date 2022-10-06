@@ -18,6 +18,14 @@ new scale slot with \link{new_scale} and the following geoms will use a
 different scale than the previous ones.
 }
 
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://eliocamp.github.io/ggnewscale/}
+  \item Report bugs at \url{https://github.com/eliocamp/ggnewscale/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Elio Campitelli \email{elio.campitelli@cima.fcen.uba.ar} (\href{https://orcid.org/0000-0002-7742-9230}{ORCID})
 
