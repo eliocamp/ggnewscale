@@ -1,5 +1,9 @@
 # ggnewscale (development version)
 
+## Bugfixes
+
+-   Fixes a bug when adding more than one extra scale and using geoms without explicit mapping (#45)
+
 # ggnewscale 0.4.8
 
 -   Updates documentation to conform to latest CRAN HTML5 requirements.
