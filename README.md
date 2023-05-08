@@ -52,7 +52,8 @@ citation("ggnewscale")
 #> 
 #>   Campitelli E (2022). _ggnewscale: Multiple Fill and Colour Scales in
 #>   'ggplot2'_. doi:10.5281/zenodo.2543762
-#>   <https://doi.org/10.5281/zenodo.2543762>, R package version 0.4.8.
+#>   <https://doi.org/10.5281/zenodo.2543762>, R package version
+#>   0.4.8.9000.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -60,7 +61,7 @@ citation("ggnewscale")
 #>     title = {ggnewscale: Multiple Fill and Colour Scales in 'ggplot2'},
 #>     author = {Elio Campitelli},
 #>     year = {2022},
-#>     note = {R package version 0.4.8},
+#>     note = {R package version 0.4.8.9000},
 #>     doi = {10.5281/zenodo.2543762},
 #>   }
 ```
@@ -337,6 +338,11 @@ ggplot(mapping = aes(x, y)) +
   geom_point(data = measurements, size = 3, aes(color = thing)) +
   # Color scale applied to geoms added after new_scale_color()
   scale_color_viridis_c(option = "A")
+#> Warning: `stat(level)` was deprecated in ggplot2 3.4.0.
+#> ℹ Please use `after_stat(level)` instead.
+#> This warning is displayed once every 8 hours.
+#> Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+#> generated.
 ```
 
 ![](man/figures/README-unnamed-chunk-3-1.png)<!-- -->

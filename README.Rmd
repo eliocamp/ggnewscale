@@ -2,7 +2,6 @@
 output: github_document
 knit: (function(input, ...) devtools::build_readme())
 ---
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r setup, include = FALSE}
