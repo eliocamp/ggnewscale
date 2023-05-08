@@ -7,7 +7,7 @@ context("tests")
 test_that("works when ggplot2 not loaded", {
 
   g <- ggplot(mapping = aes(x, y)) +
-    geom_contour(data = topography, aes(z = z, color = ..level..)) +
+    geom_contour(data = topography, aes(z = z, color = after_stat(level))) +
     new_scale_color()
 
   expect_true(inherits(g,"ggplot"))
@@ -97,7 +97,7 @@ test_that("works with many layers", {
   layer <- function(number) {
     list(new_scale_fill(),
          geom_tile(data = ~.x[.x$x == number, ], aes(fill = z)),
-         scale_fill_brewer(name = number, palette = number)
+         scale_fill_brewer(name = number, palette = number, guide = guide_legend(order = number))
     )
   }
   g <- ggplot(data, aes(x, y)) +
@@ -126,4 +126,38 @@ test_that("changes override.aes", {
   vdiffr::expect_doppelganger("respects override.aes 2", p2 + new_scale_fill() + new_scale_color())
 
 
+})
+
+# https://github.com/eliocamp/ggnewscale/issues/45
+test_that("using implicit mapping works", {
+  set.seed(42)
+  n <- 300
+  data <- data.frame(x = c(rnorm(n, 5, 2),
+                           rnorm(n,  5, 2),
+                           rnorm(n,  5, 2),
+                           rnorm(n,  5, 2)),
+                     y = c(rnorm(n, 5, 1),
+                           rnorm(n, 10, 1),
+                           rnorm(n, 15, 1),
+                           rnorm(n, 20, 1)),
+                     label = c(rep('1', n),
+                               rep('2', n),
+                               rep('3', n),
+                               rep('4', n)))
+
+
+  layer_implicit <- function(number) {
+    list(new_scale_fill(),
+         geom_bin2d(data = ~.x[.x$label == number, ]),
+         scale_fill_distiller(name = number, palette = number, guide = guide_legend(order = number))
+    )
+  }
+
+  g <- ggplot(data, aes(x, y)) +
+    layer_implicit(1) +
+    layer_implicit(2) +
+    layer_implicit(3) +
+    layer_implicit(4)
+
+  vdiffr::expect_doppelganger("implicit mapping", g)
 })

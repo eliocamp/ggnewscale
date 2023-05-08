@@ -170,6 +170,13 @@ bump_aes_layer <- function(layer, new_aes) {
 
   new_layer$stat <- new_stat
 
+  # Make implicit mapping explicit.
+  # This fixes https://github.com/eliocamp/ggnewscale/issues/45 but it feels
+  # wrong. I don't understand why implicit mapping breaks when adding more than
+  # one extra scale.
+  if (is.null(new_layer$mapping[[old_aes]])) {
+    new_layer$mapping[[old_aes]] <- new_stat$default_aes[[new_aes]]
+  }
   new_layer$mapping <- change_name(new_layer$mapping, old_aes, new_aes)
   new_layer$aes_params <- change_name(new_layer$aes_params, old_aes, new_aes)
   new_layer
