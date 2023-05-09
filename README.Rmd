@@ -26,7 +26,7 @@ status](http://www.r-pkg.org/badges/version/ggnewscale)](https://cran.r-project.
 
 `ggnewscale` tries to make it painless to use multiple scales in `ggplot2`. Although originally intended to use with colour and fill, it should work with any `aes`, such as `shape`, `linetype` and the rest.
 
-[ggnewscale: spend 400% more time tweaking your ggplot!](https://twitter.com/mattansb/status/1524415881920528385)
+[ggnewscale: spend 400% more time tweaking your ggplot!](https://web.archive.org/web/20220511154749/https://twitter.com/mattansb/status/1524415881920528385)
 
 For another way of defining multiple scales, you can also try [relayer](https://github.com/clauswilke/relayer).
 
