@@ -109,6 +109,11 @@ bump_aes_layer <- function(layer, new_aes) {
       old_aes <- names(new_layer$geom$default_aes)[remove_new(names(new_layer$geom$default_aes)) %in% new_aes]
     }
   }
+  # Return unchanged layer if it doens't use this aes
+  if (length(old_aes) == 0) {
+    return(new_layer)
+  }
+
   new_aes <- paste0(old_aes, "_new")
 
   old_geom <- new_layer$geom
