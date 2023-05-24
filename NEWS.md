@@ -1,5 +1,3 @@
-# ggnewscale (development version)
-
 # ggnewscale 0.4.9
 
 ## Bugfixes
