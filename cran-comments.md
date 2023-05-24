@@ -1,7 +1,6 @@
 
 This is a resubmission; in this version I've:
- * removed the Date entry in DESCRIPTION.
- * fixed invalid URLs  
+ * fix an issue with reverse dependencies
 
 
 ## Test environments
