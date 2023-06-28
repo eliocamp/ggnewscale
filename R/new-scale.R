@@ -207,15 +207,38 @@ bump_aes_scale <- function(scale, new_aes) {
 
     scale$aesthetics[scale$aesthetics %in% old_aes] <- new_aes
 
-    no_guide <- isFALSE(scale$guide) | isTRUE(scale$guide == "none")
+    if (is.character(scale$guide)) {
+      no_guide <- isTRUE(scale$guide == "none")
+    } else {
+      no_guide <- isFALSE(scale$guide) ||
+        isTRUE(inherits(scale$guide, c("guide_none", "GuideNone")))
+    }
     if (!no_guide) {
       if (is.character(scale$guide)) {
         scale$guide <- get(paste0("guide_", scale$guide), mode = "function")()
       }
-      scale$guide$available_aes[scale$guide$available_aes %in% old_aes] <- new_aes
+      if (inherits(scale$guide, "Guide")) {
+        # Make clone of guie
+        old <- scale$guide
+        new <- ggproto(NULL, old)
 
-      if (!is.null(scale$guide$override.aes)) {
-        names(scale$guide$override.aes)[names(scale$guide$override.aes) == old_aes] <- new_aes
+        # Change available aesthetics
+        new$available_aes <- change_name(new$available_aes, old_aes, new_aes)
+        new$available_aes[new$available_aes %in% old_aes] <- new_aes
+
+        # Update aesthetic override
+        if (!is.null(new$params$override.aes)) {
+          new$params$override.aes <- change_name(new$params$override.aes, old_aes, new_aes)
+        }
+
+        # Re-assign updated guide
+        scale$guide <- new
+      } else {
+        scale$guide$available_aes[scale$guide$available_aes %in% old_aes] <- new_aes
+
+        if (!is.null(scale$guide$override.aes)) {
+          names(scale$guide$override.aes)[names(scale$guide$override.aes) == old_aes] <- new_aes
+        }
       }
 
     }
