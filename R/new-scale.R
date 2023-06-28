@@ -80,10 +80,18 @@ ggplot_add.new_aes <- function(object, plot, object_name) {
 bump_aes_guides <- function(guides, new_aes) {
   original_aes <- new_aes
 
-  to_change <- remove_new(names(guides)) == original_aes
+  if (inherits(guides, "Guides")) {
+    to_change <- remove_new(names(guides$guides)) == original_aes
 
-  if (any(to_change)) {
-    names(guides)[to_change] <- paste0(names(guides), "_new")
+    if (any(to_change)) {
+      names(guides$guides)[to_change] <- paste0(names(guides$guides), "_new")
+    }
+  } else {
+    to_change <- remove_new(names(guides)) == original_aes
+
+    if (any(to_change)) {
+      names(guides)[to_change] <- paste0(names(guides), "_new")
+    }
   }
 
   return(guides)
