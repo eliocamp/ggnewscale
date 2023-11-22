@@ -2,7 +2,7 @@
 
 S3method("+",gg_ggnewscale_renamed_aes)
 S3method(chooseOpsMethod,gg_ggnewscale_renamed_aes)
-S3method(ggplot_add,ggnewscale_aes_renamer)
+S3method(ggplot_add,new_aes)
 export("%+%.gg_ggnewscale_renamed_aes")
 export(new_scale)
 export(new_scale_color)

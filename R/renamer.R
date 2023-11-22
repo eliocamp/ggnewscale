@@ -3,7 +3,7 @@ chooseOpsMethod.gg_ggnewscale_renamed_aes <- function(x, y, mx, my, cl, reverse)
 
 #' @export
 #' @importFrom ggplot2 ggplot_add
-ggplot_add.ggnewscale_aes_renamer <- function(object, plot, object_name) {
+ggplot_add.new_aes <- function(object, plot, object_name) {
   class(plot) <- c("gg_ggnewscale_renamed_aes", class(plot))
   # Add the ggnewscale prefix to reduce risk of collisions
   plot[["ggnewscale_renamed_aes"]] <- combine_renamed_aes(plot[["ggnewscale_renamed_aes"]],

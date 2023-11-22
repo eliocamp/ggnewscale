@@ -36,7 +36,7 @@
 #' @export
 new_scale <- function(aes, new_name = NULL) {
   structure(setNames(list(new_name), ggplot2::standardise_aes_names(aes)),
-            class = "ggnewscale_aes_renamer")
+            class = "new_aes")
 }
 
 
