@@ -43,13 +43,13 @@ test_that("doesn't do partial matching", {
   options(warnPartialMatchDollar = TRUE)
   g <- ggplot(mpg, aes(displ, hwy)) +
     geom_point(aes(colour = factor(year)), size = 5) +
-    scale_colour_brewer("year", type = "qual", palette = 5, guide = guide_legend(order = 0)) +
+    scale_colour_brewer(name = "year", type = "qual", palette = 5, guide = guide_legend(order = 0)) +
     new_scale_colour() +
     geom_point(aes(colour = cyl == 4), size = 1, fill = NA) +
-    scale_colour_manual("4 cylinder", values = c("grey60", "black"), guide = guide_legend(order = 1))
+    scale_colour_manual(name = "4 cylinder", values = c("grey60", "black"), guide = guide_legend(order = 1))
 
   expect_warning(print(g), NA)
-
+  options(warnPartialMatchDollar = FALSE)
   vdiffr::expect_doppelganger("guides2", g)
 })
 

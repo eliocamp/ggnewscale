@@ -7,7 +7,7 @@
 \alias{new_scale_colour}
 \title{Adds a new scale to a plot}
 \usage{
-new_scale(new_aes)
+new_scale(aes, new_name = NULL)
 
 new_scale_fill()
 
