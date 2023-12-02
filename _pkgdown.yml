@@ -1,1 +1,4 @@
-destination: docs
+url: https://eliocamp.github.io/ggnewscale/
+template:
+  bootstrap: 5
+
