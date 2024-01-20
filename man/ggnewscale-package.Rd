@@ -22,6 +22,7 @@ different scale than the previous ones.
 Useful links:
 \itemize{
   \item \url{https://eliocamp.github.io/ggnewscale/}
+  \item \url{https://github.com/eliocamp/ggnewscale}
   \item Report bugs at \url{https://github.com/eliocamp/ggnewscale/issues}
 }
 
