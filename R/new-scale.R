@@ -220,7 +220,7 @@ bump_aes_scale <- function(scale, new_aes) {
       if (inherits(scale$guide, "Guide")) {
         # Make clone of guie
         old <- scale$guide
-        new <- ggproto(NULL, old)
+        new <- ggplot2::ggproto(NULL, old)
 
         # Change available aesthetics
         new$available_aes <- change_name(new$available_aes, old_aes, new_aes)
