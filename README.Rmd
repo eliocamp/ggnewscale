@@ -72,7 +72,6 @@ RefManageR::ReadBib(bib)
 ```
 </details>
 
-
 ## Usage
 
 The main function is `new_scale()` and its aliases `new_scale_color()` and `new_scale_fill()`. When added to a plot, every geom added after them will use a different scale.
