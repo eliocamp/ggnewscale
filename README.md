@@ -51,15 +51,14 @@ citation("ggnewscale")
 #> 
 #>   Campitelli E (????). _ggnewscale: Multiple Fill and Colour Scales in
 #>   'ggplot2'_. doi:10.5281/zenodo.2543762
-#>   <https://doi.org/10.5281/zenodo.2543762>, R package version
-#>   0.4.9.9000.
+#>   <https://doi.org/10.5281/zenodo.2543762>, R package version 0.4.10.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{R-ggnewscale,
 #>     title = {ggnewscale: Multiple Fill and Colour Scales in 'ggplot2'},
 #>     author = {Elio Campitelli},
-#>     note = {R package version 0.4.9.9000},
+#>     note = {R package version 0.4.10},
 #>     doi = {10.5281/zenodo.2543762},
 #>   }
 ```
@@ -487,7 +486,7 @@ M. Barton, p. e61812. ISSN: 2050-084X. DOI: 10.7554/eLife.61812.
 Immune-Related Genes Associated with the Microenvironment of Patients
 with Unexplained Infertility”. In: *Annals of Translational Medicine*
 11.2 (2 Jan. 2023), pp. 84-84. ISSN: 2305-5847, 2305-5839. DOI:
-10.21037/atm-22-5810. <https://atm.amegroups.com/article/view/108642>
+10.21037/atm-22-5810. <https://atm.amegroups.org/article/view/108642>
 (visited on 02/12/2023).
 
 \[61\] L. Weidenauer and M. Quadroni. “Phosphorylation in the Charged
