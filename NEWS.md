@@ -1,5 +1,10 @@
 # ggnewscale (development version)
 
+## Bugfixes
+
+-   Layers will retain custom attributes.
+    (#65, @rsh52)
+
 # ggnewscale 0.4.10
 
 # ggnewscale 0.4.9

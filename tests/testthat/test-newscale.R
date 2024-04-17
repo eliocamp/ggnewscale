@@ -162,3 +162,18 @@ test_that("using implicit mapping works", {
 
   vdiffr::expect_doppelganger("implicit mapping", g)
 })
+
+
+test_that("custom attributes are retained", {
+  g <- ggplot(mtcars, aes(cyl, disp)) +
+    geom_point()
+
+  attr(g$layers[[1]], "my_attribute") <- "I exist!"
+
+  p <- g +
+    new_scale_color() +
+    geom_point()
+
+  expect_equal(attr(p$layers[[1]], "my_attribute"),
+               attr(g$layers[[1]], "my_attribute"))
+})

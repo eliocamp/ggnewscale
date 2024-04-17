@@ -192,6 +192,13 @@ bump_aes_layer <- function(layer, new_aes) {
   }
   new_layer$mapping <- change_name(new_layer$mapping, old_aes, new_aes)
   new_layer$aes_params <- change_name(new_layer$aes_params, old_aes, new_aes)
+
+  # Restore custom attributes
+  attributes_old <- attributes(layer)
+  attributes_new <- attributes(new_layer)
+  attributes_replace <- attributes_old[setdiff(names(attributes_old), names(attributes_new))]
+
+  attributes(new_layer)[names(attributes_replace)] <- attributes_replace
   new_layer
 }
 
