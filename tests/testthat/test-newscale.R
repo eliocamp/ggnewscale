@@ -98,7 +98,7 @@ test_that("works with many layers", {
   layer <- function(number) {
     list(new_scale_fill(),
          geom_tile(data = ~.x[.x$x == number, ], aes(fill = z)),
-         scale_fill_brewer(name = number, palette = number, guide = guide_legend(order = number))
+         scale_fill_brewer(name = number, palette = number*2, guide = guide_legend(order = number))
     )
   }
   g <- ggplot(data, aes(x, y)) +
