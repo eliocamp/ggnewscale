@@ -14,7 +14,7 @@ URL: https://eliocamp.github.io/ggnewscale/, https://github.com/eliocamp/ggnewsc
 BugReports: https://github.com/eliocamp/ggnewscale/issues
 Encoding: UTF-8
 Imports:
-  ggplot2 (>= 3.0.0)
+  ggplot2 (>= 3.5.0)
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
 Suggests: 
