@@ -111,6 +111,28 @@ test_that("works with many layers", {
 })
 
 
+test_that("previous layers don't change" , {
+  data <- expand.grid(y = 1:4, x = 1:4)
+  data$z <- c("a", "b")
+
+  layer <- function(number) {
+    list(new_scale_fill(),
+         geom_tile(data = ~.x[.x$x == number, ], aes(fill = z)),
+         scale_fill_brewer(name = number, palette = number*2, guide = guide_legend(order = number))
+    )
+  }
+  g1 <- ggplot(data, aes(x, y)) +
+    layer(1) +
+    layer(2)
+
+  g2 <- g1 +
+    layer(3) +
+    layer(4)
+
+  expect_equal(g2$layers[[1]]$mapping, g1$layers[[1]]$mapping)
+})
+
+
 test_that("changes override.aes", {
   skip_if_not_installed("vdiffr")
   # from https://github.com/r-lib/vdiffr/issues/98
