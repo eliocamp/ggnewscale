@@ -1,27 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://eliocamp.github.io/ggnewscale/404.html</loc>
-  </url>
-  <url>
-    <loc>https://eliocamp.github.io/ggnewscale/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://eliocamp.github.io/ggnewscale/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://eliocamp.github.io/ggnewscale/index.html</loc>
-  </url>
-  <url>
-    <loc>https://eliocamp.github.io/ggnewscale/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://eliocamp.github.io/ggnewscale/reference/ggnewscale-package.html</loc>
-  </url>
-  <url>
-    <loc>https://eliocamp.github.io/ggnewscale/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://eliocamp.github.io/ggnewscale/reference/new_scale.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://eliocamp.github.io/ggnewscale/404.html</loc></url>
+<url><loc>https://eliocamp.github.io/ggnewscale/LICENSE.html</loc></url>
+<url><loc>https://eliocamp.github.io/ggnewscale/authors.html</loc></url>
+<url><loc>https://eliocamp.github.io/ggnewscale/index.html</loc></url>
+<url><loc>https://eliocamp.github.io/ggnewscale/news/index.html</loc></url>
+<url><loc>https://eliocamp.github.io/ggnewscale/reference/ggnewscale-package.html</loc></url>
+<url><loc>https://eliocamp.github.io/ggnewscale/reference/index.html</loc></url>
+<url><loc>https://eliocamp.github.io/ggnewscale/reference/new_scale.html</loc></url>
 </urlset>
+
