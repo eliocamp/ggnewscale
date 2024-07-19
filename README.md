@@ -445,7 +445,7 @@ In: *BMC Ecology and Evolution* 23.1 (Dec. 2023), p. 69. ISSN:
 \[66\] M. R. Scharn, M. C. G. Brachmann, M. A. Patchett, et al.
 *Vegetation Responses to 26 Years of Warming at Latnjajaure Field
 Station, Northern Sweden.*
-<https://cdnsciencepub.com/doi/abs/10.1139/AS-2020-0042>.
+<https://cdnsciencepub.com/doi/full/10.1139/as-2020-0042>.
 Research-Article. Apr. 2021. DOI: 10.1139/AS-2020-0042. (Visited on
 04/05/2021).
 
