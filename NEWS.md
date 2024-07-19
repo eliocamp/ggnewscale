@@ -1,3 +1,5 @@
+# ggnewscale (development version)
+
 # ggnewscale 0.5.0
 
 No new features, but a relatively important rewrite of the internals and updated dependency on ggplot2 3.5.0 to support the new Guides system (and *only* the new one).
