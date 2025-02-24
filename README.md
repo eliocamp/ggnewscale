@@ -414,12 +414,12 @@ Facilities”. In: *Clinical Infectious Diseases* (May. 2021). ISSN:
 \[61\] J. Lechmann, A. Szelecsenyi, S. Bruhn, et al. *The Swiss National
 Program for the Surveillance of Influenza A Viruses in Pigs and Humans:
 Genetic Variability and Zoonotic Transmissions from 2010 - 2022*. Jan.
-2025. DOI: 10.1101/2025.01.28.24319114. (Visited on 01/31/2025).
+2025. DOI: 10.1101/2025.01.28.24319114. (Visited on 02/05/2025).
 
 \[62\] J. Lechmann, A. Szelecsenyi, S. Bruhn, et al. *The Swiss National
 Program for the Surveillance of Influenza A Viruses in Pigs and Humans:
 Genetic Variability and Zoonotic Transmissions from 2010 - 2022*. Jan.
-2025. DOI: 10.1101/2025.01.28.24319114. (Visited on 02/05/2025).
+2025. DOI: 10.1101/2025.01.28.24319114. (Visited on 01/31/2025).
 
 \[63\] L. S. H. Lee and C. Y. Jim. “Thermal and Humidification Effects
 of a Swimming Pool in Hong Kong’s Humid-Subtropical Summer”. In:
@@ -544,8 +544,7 @@ In: *BMC Ecology and Evolution* 23.1 (Dec. 2023), p. 69. ISSN:
 
 \[85\] M. R. Scharn, M. C. G. Brachmann, M. A. Patchett, et al.
 *Vegetation Responses to 26 Years of Warming at Latnjajaure Field
-Station, Northern Sweden.*
-<https://cdnsciencepub.com/doi/full/10.1139/as-2020-0042>.
+Station, Northern Sweden.* <https://doi.org/10.1139/as-2020-0042>.
 Research-Article. Apr. 2021. DOI: 10.1139/AS-2020-0042. (Visited on
 04/05/2021).
 
