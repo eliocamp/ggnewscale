@@ -1,3 +1,5 @@
+# ggnewscale (development version)
+
 # ggnewscale 0.5.1
 
 Adds new startup message.
