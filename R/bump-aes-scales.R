@@ -45,7 +45,11 @@ bump_aes_scale <- function(scale, original_aes, new_aes) {
           names(scale$guide$override.aes)[names(scale$guide$override.aes) == old_aes] <- new_aes
         }
       }
-
+      if (is.null(scale$palette)) {
+        # This is a fallback mechanism for when palettes are NULL, which can
+        # occur in ggplot2 4.0.0+.
+        scale <- use_fallback_palette(scale, old_aes)
+      }
     }
   }
 
@@ -56,4 +60,25 @@ bump_aes_scale <- function(scale, original_aes, new_aes) {
 
 bump_aes_scales <- function(scales, original_aes, new_aes) {
   lapply(scales, bump_aes_scale, original_aes = original_aes, new_aes = new_aes)
+}
+
+use_fallback_palette <- function(scale, original_aes, theme = ggplot2::theme_get()) {
+  # Strategy here is to recycle ggplot2's palette resolution mechanism
+  # We instantiate a fake plot with a fake scale to extract the palette
+  dummy_scale <- ggplot2::ggproto(NULL, scale, aesthetics = original_aes)
+  dummy_plot  <- ggplot2::ggplot() + dummy_scale
+  scales_list <- dummy_plot$scales
+
+  if (is.function(scales_list$set_palettes)) {
+    scales_list$set_palettes(theme)
+  } else {
+    # Should only end up here if we have a misconstructed scale prior to
+    # ggplot2 4.0.0
+    # Nothing to do here except return the scale and hope for the best.
+    return(scale)
+  }
+
+  # Extract palette and instantiate child scale
+  palette <- scales_list$get_scales(original_aes)$palette
+  ggplot2::ggproto(NULL, scale, palette = palette)
 }
