@@ -22,6 +22,7 @@ coverage](https://codecov.io/gh/eliocamp/ggnewscale/branch/master/graph/badge.sv
 [![DOI](https://zenodo.org/badge/161934647.svg)](https://zenodo.org/badge/latestdoi/161934647)
 [![CRAN
 status](http://www.r-pkg.org/badges/version/ggnewscale)](https://cran.r-project.org/package=ggnewscale)
+[![R-CMD-check](https://github.com/eliocamp/ggnewscale/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/eliocamp/ggnewscale/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 `ggnewscale` tries to make it painless to use multiple scales in `ggplot2`. Although originally intended to use with colour and fill, it should work with any `aes`, such as `shape`, `linetype` and the rest.

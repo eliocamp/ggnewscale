@@ -12,6 +12,7 @@ coverage](https://codecov.io/gh/eliocamp/ggnewscale/branch/master/graph/badge.sv
 [![DOI](https://zenodo.org/badge/161934647.svg)](https://zenodo.org/badge/latestdoi/161934647)
 [![CRAN
 status](http://www.r-pkg.org/badges/version/ggnewscale)](https://cran.r-project.org/package=ggnewscale)
+[![R-CMD-check](https://github.com/eliocamp/ggnewscale/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/eliocamp/ggnewscale/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 `ggnewscale` tries to make it painless to use multiple scales in
@@ -51,14 +52,15 @@ citation("ggnewscale")
 #> 
 #>   Campitelli E (????). _ggnewscale: Multiple Fill and Colour Scales in
 #>   'ggplot2'_. doi:10.5281/zenodo.2543762
-#>   <https://doi.org/10.5281/zenodo.2543762>, R package version 0.5.1.
+#>   <https://doi.org/10.5281/zenodo.2543762>, R package version
+#>   0.5.1.9000.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{R-ggnewscale,
 #>     title = {ggnewscale: Multiple Fill and Colour Scales in 'ggplot2'},
 #>     author = {Elio Campitelli},
-#>     note = {R package version 0.5.1},
+#>     note = {R package version 0.5.1.9000},
 #>     doi = {10.5281/zenodo.2543762},
 #>   }
 ```
@@ -73,7 +75,9 @@ knitr::write_bib(c("ggnewscale"), "packages.bib")
 And then add citations with `@R-ggnewscale`.
 
 <details>
+
 <summary>
+
 Click to see a list of some publications that have cited ggnewscale.
 Thanks!
 </summary>
