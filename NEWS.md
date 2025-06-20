@@ -1,3 +1,5 @@
+# ggnewscale (development version)
+
 # ggnewscale 0.5.2
 
 Adds compatibility with ggplot2 4.0.0
