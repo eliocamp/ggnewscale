@@ -1,5 +1,7 @@
 # ggnewscale (development version)
 
+Adds compatibility with ggplot2 4.0.0
+
 # ggnewscale 0.5.1
 
 Adds new startup message.
