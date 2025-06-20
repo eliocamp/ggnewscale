@@ -1,7 +1,7 @@
 
 #' @export
 #' @importFrom ggplot2 ggplot_add
-ggplot_add.new_aes <- function(object, plot, object_name) {
+ggplot_add.new_aes <- function(object, plot, ...) {
   # To add default scales (I need to build the whole plot because they might be computed aesthetics)
   if (is.null(plot$scales$get_scales(object))) {
     built <- ggplot2::ggplot_build(plot)
