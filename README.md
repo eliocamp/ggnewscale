@@ -52,15 +52,14 @@ citation("ggnewscale")
 #> 
 #>   Campitelli E (????). _ggnewscale: Multiple Fill and Colour Scales in
 #>   'ggplot2'_. doi:10.5281/zenodo.2543762
-#>   <https://doi.org/10.5281/zenodo.2543762>, R package version
-#>   0.5.1.9000.
+#>   <https://doi.org/10.5281/zenodo.2543762>, R package version 0.5.2.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{R-ggnewscale,
 #>     title = {ggnewscale: Multiple Fill and Colour Scales in 'ggplot2'},
 #>     author = {Elio Campitelli},
-#>     note = {R package version 0.5.1.9000},
+#>     note = {R package version 0.5.2},
 #>     doi = {10.5281/zenodo.2543762},
 #>   }
 ```
