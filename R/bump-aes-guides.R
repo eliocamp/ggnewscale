@@ -1,4 +1,3 @@
-
 bump_aes_guides <- function(guides, original_aes, new_aes) {
   for (g in seq_along(guides)) {
     if (is_protected(guides[[g]], original_aes)) {

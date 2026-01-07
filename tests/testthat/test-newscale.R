@@ -10,20 +10,20 @@ test_that("works when ggplot2 not loaded", {
     ) +
     new_scale_color()
 
-  expect_true(inherits(g,"ggplot"))
-
+  expect_true(inherits(g, "ggplot"))
 })
 
 library(ggplot2)
 test_that("guides work", {
   skip_if_not_installed("vdiffr")
   # from https://github.com/eliocamp/ggnewscale/issues/25
-  g <- ggplot(mtcars) + aes(mpg, disp) +
-    geom_point(aes(colour=factor(cyl)),  size=7) +
-    scale_colour_brewer(type='qual', guide = guide_legend(order = 0)) +
+  g <- ggplot(mtcars) +
+    aes(mpg, disp) +
+    geom_point(aes(colour = factor(cyl)), size = 7) +
+    scale_colour_brewer(type = 'qual', guide = guide_legend(order = 0)) +
     new_scale_colour() +
-    geom_point(aes(colour=factor(gear)), size=3) +
-    scale_colour_brewer(palette='Set1', guide = guide_legend(order = 0))
+    geom_point(aes(colour = factor(gear)), size = 3) +
+    scale_colour_brewer(palette = 'Set1', guide = guide_legend(order = 0))
 
   vdiffr::expect_doppelganger("guides", g)
 
@@ -44,10 +44,19 @@ test_that("doesn't do partial matching", {
   # options(warnPartialMatchDollar = TRUE)
   g <- ggplot(mpg, aes(displ, hwy)) +
     geom_point(aes(colour = factor(year)), size = 5) +
-    scale_colour_brewer("year", type = "qual", palette = 5, guide = guide_legend(order = 0)) +
+    scale_colour_brewer(
+      "year",
+      type = "qual",
+      palette = 5,
+      guide = guide_legend(order = 0)
+    ) +
     new_scale_colour() +
     geom_point(aes(colour = cyl == 4), size = 1, fill = NA) +
-    scale_colour_manual("4 cylinder", values = c("grey60", "black"), guide = guide_legend(order = 1))
+    scale_colour_manual(
+      "4 cylinder",
+      values = c("grey60", "black"),
+      guide = guide_legend(order = 1)
+    )
 
   # Comment out. The test catchet errors in upstream packages.
   # expect_warning(print(g), NA)
@@ -56,26 +65,27 @@ test_that("doesn't do partial matching", {
 })
 
 
-
-
 test_that("stats with custom `setup_data`", {
   # from https://github.com/eliocamp/ggnewscale/issues/27
   # Manipulate `setup_data()` of `StatYdensity` and store the object as `StatYdensity2`.
-  StatYdensity2 <- ggplot2::ggproto("StatYdensity2", StatYdensity,
-                                    setup_data = function (data, params) {
-                                      if (is.null(data[["fill"]])) {
-                                        stop("No fill column")
-                                      }
-                                      data
-                                    })
+  StatYdensity2 <- ggplot2::ggproto(
+    "StatYdensity2",
+    StatYdensity,
+    setup_data = function(data, params) {
+      if (is.null(data[["fill"]])) {
+        stop("No fill column")
+      }
+      data
+    }
+  )
 
   set.seed(5)
 
   df <- data.frame(
-    x = floor(runif(100, min=1, max=5)),
-    y = floor(runif(100, min=1, max=10)),
-    gender = c("female", "male")[floor(runif(100, min=1, max=3))],
-    fill = floor(runif(100, min=1, max=5))
+    x = floor(runif(100, min = 1, max = 5)),
+    y = floor(runif(100, min = 1, max = 10)),
+    gender = c("female", "male")[floor(runif(100, min = 1, max = 3))],
+    fill = floor(runif(100, min = 1, max = 5))
   )
   g <- ggplot(df, aes(x, y, group = interaction(x, gender))) +
     # Call `geom_violin()` using the manipulated stat `StatYdensity2`.
@@ -85,7 +95,6 @@ test_that("stats with custom `setup_data`", {
     geom_point(aes(x, y, fill = fill), shape = 21, inherit.aes = F) +
     scale_fill_continuous(guide = guide_colorbar(order = 1))
   expect_error(print(g), NA)
-
 })
 
 
@@ -95,11 +104,15 @@ test_that("works with many layers", {
   data <- expand.grid(y = 1:4, x = 1:4)
   data$z <- c("a", "b")
 
-
   layer <- function(number) {
-    list(new_scale_fill(),
-         geom_tile(data = ~.x[.x$x == number, ], aes(fill = z)),
-         scale_fill_brewer(name = number, palette = number*2, guide = guide_legend(order = number))
+    list(
+      new_scale_fill(),
+      geom_tile(data = ~ .x[.x$x == number, ], aes(fill = z)),
+      scale_fill_brewer(
+        name = number,
+        palette = number * 2,
+        guide = guide_legend(order = number)
+      )
     )
   }
   g <- ggplot(data, aes(x, y)) +
@@ -112,14 +125,19 @@ test_that("works with many layers", {
 })
 
 
-test_that("previous layers don't change" , {
+test_that("previous layers don't change", {
   data <- expand.grid(y = 1:4, x = 1:4)
   data$z <- c("a", "b")
 
   layer <- function(number) {
-    list(new_scale_fill(),
-         geom_tile(data = ~.x[.x$x == number, ], aes(fill = z)),
-         scale_fill_brewer(name = number, palette = number*2, guide = guide_legend(order = number))
+    list(
+      new_scale_fill(),
+      geom_tile(data = ~ .x[.x$x == number, ], aes(fill = z)),
+      scale_fill_brewer(
+        name = number,
+        palette = number * 2,
+        guide = guide_legend(order = number)
+      )
     )
   }
   g1 <- ggplot(data, aes(x, y)) +
@@ -139,41 +157,42 @@ test_that("changes override.aes", {
   # from https://github.com/r-lib/vdiffr/issues/98
   p2 <- ggplot(mtcars, aes(factor(gear), mpg, color = factor(gear))) +
     geom_boxplot() +
-    scale_color_brewer(type = "qual",
-                       aesthetics = c("fill", "color"),
-                       guide = guide_legend(
-                         override.aes = list(
-                           fill = c("red", "blue", "blue")
-                         )))
+    scale_color_brewer(
+      type = "qual",
+      aesthetics = c("fill", "color"),
+      guide = guide_legend(
+        override.aes = list(
+          fill = c("red", "blue", "blue")
+        )
+      )
+    )
 
   vdiffr::expect_doppelganger("respects override.aes", p2 + new_scale_fill())
-  vdiffr::expect_doppelganger("respects override.aes 2", p2 + new_scale_fill() + new_scale_color())
-
-
+  vdiffr::expect_doppelganger(
+    "respects override.aes 2",
+    p2 + new_scale_fill() + new_scale_color()
+  )
 })
 
 # https://github.com/eliocamp/ggnewscale/issues/45
 test_that("using implicit mapping works", {
   set.seed(42)
   n <- 300
-  data <- data.frame(x = c(rnorm(n, 5, 2),
-                           rnorm(n,  5, 2),
-                           rnorm(n,  5, 2),
-                           rnorm(n,  5, 2)),
-                     y = c(rnorm(n, 5, 1),
-                           rnorm(n, 10, 1),
-                           rnorm(n, 15, 1),
-                           rnorm(n, 20, 1)),
-                     label = c(rep('1', n),
-                               rep('2', n),
-                               rep('3', n),
-                               rep('4', n)))
-
+  data <- data.frame(
+    x = c(rnorm(n, 5, 2), rnorm(n, 5, 2), rnorm(n, 5, 2), rnorm(n, 5, 2)),
+    y = c(rnorm(n, 5, 1), rnorm(n, 10, 1), rnorm(n, 15, 1), rnorm(n, 20, 1)),
+    label = c(rep('1', n), rep('2', n), rep('3', n), rep('4', n))
+  )
 
   layer_implicit <- function(number) {
-    list(new_scale_fill(),
-         geom_bin2d(data = ~.x[.x$label == number, ]),
-         scale_fill_distiller(name = number, palette = number, guide = guide_legend(order = number))
+    list(
+      new_scale_fill(),
+      geom_bin2d(data = ~ .x[.x$label == number, ]),
+      scale_fill_distiller(
+        name = number,
+        palette = number,
+        guide = guide_legend(order = number)
+      )
     )
   }
 
@@ -197,6 +216,8 @@ test_that("custom attributes are retained", {
     new_scale_color() +
     geom_point()
 
-  expect_equal(attr(p$layers[[1]], "my_attribute"),
-               attr(g$layers[[1]], "my_attribute"))
+  expect_equal(
+    attr(p$layers[[1]], "my_attribute"),
+    attr(g$layers[[1]], "my_attribute")
+  )
 })

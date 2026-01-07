@@ -23,7 +23,7 @@ bump_aes_scale <- function(scale, original_aes, new_aes) {
         scale$guide <- get(paste0("guide_", scale$guide), mode = "function")()
       }
       if (inherits(scale$guide, "Guide")) {
-        # Make clone of guie
+        # Make clone of guide
         old <- scale$guide
         new <- ggplot2::ggproto(NULL, old)
 
@@ -33,16 +33,24 @@ bump_aes_scale <- function(scale, original_aes, new_aes) {
 
         # Update aesthetic override
         if (!is.null(new$params$override.aes)) {
-          new$params$override.aes <- change_name(new$params$override.aes, old_aes, new_aes)
+          new$params$override.aes <- change_name(
+            new$params$override.aes,
+            old_aes,
+            new_aes
+          )
         }
 
         # Re-assign updated guide
         scale$guide <- new
       } else {
-        scale$guide$available_aes[scale$guide$available_aes %in% old_aes] <- new_aes
+        scale$guide$available_aes[
+          scale$guide$available_aes %in% old_aes
+        ] <- new_aes
 
         if (!is.null(scale$guide$override.aes)) {
-          names(scale$guide$override.aes)[names(scale$guide$override.aes) == old_aes] <- new_aes
+          names(scale$guide$override.aes)[
+            names(scale$guide$override.aes) == old_aes
+          ] <- new_aes
         }
       }
       if (is.null(scale$palette)) {
@@ -62,11 +70,15 @@ bump_aes_scales <- function(scales, original_aes, new_aes) {
   lapply(scales, bump_aes_scale, original_aes = original_aes, new_aes = new_aes)
 }
 
-use_fallback_palette <- function(scale, original_aes, theme = ggplot2::theme_get()) {
+use_fallback_palette <- function(
+  scale,
+  original_aes,
+  theme = ggplot2::theme_get()
+) {
   # Strategy here is to recycle ggplot2's palette resolution mechanism
   # We instantiate a fake plot with a fake scale to extract the palette
   dummy_scale <- ggplot2::ggproto(NULL, scale, aesthetics = original_aes)
-  dummy_plot  <- ggplot2::ggplot() + dummy_scale
+  dummy_plot <- ggplot2::ggplot() + dummy_scale
   scales_list <- dummy_plot$scales
 
   if (is.function(scales_list$set_palettes)) {

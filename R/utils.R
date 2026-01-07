@@ -1,9 +1,8 @@
-
-isTRUE <- function (x) {
+isTRUE <- function(x) {
   is.logical(x) && length(x) == 1L && !is.na(x) && x
 }
 
-isFALSE <- function (x) {
+isFALSE <- function(x) {
   is.logical(x) && length(x) == 1L && !is.na(x) && !x
 }
 
@@ -52,10 +51,12 @@ protect.default <- function(object, aes) {
 }
 
 protect.character <- function(object, aes) {
-  attr(object, "ggnewscale_renamed") <- unique(c(attr(object, "ggnewscale_renamed"), aes))
+  attr(object, "ggnewscale_renamed") <- unique(c(
+    attr(object, "ggnewscale_renamed"),
+    aes
+  ))
   return(object)
 }
-
 
 
 is_protected <- function(object, aes) {

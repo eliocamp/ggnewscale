@@ -55,7 +55,3 @@ new_scale_color <- function() {
 new_scale_colour <- function() {
   new_scale("colour")
 }
-
-
-
-
