@@ -1,19 +1,20 @@
-library(ggplot2)
-topography <- expand.grid(x = 1:nrow(volcano),
-                          y = 1:ncol(volcano))
+topography <- expand.grid(x = 1:nrow(volcano), y = 1:ncol(volcano))
 topography$z <- c(volcano)
 
 context("tests")
 test_that("works when ggplot2 not loaded", {
-
-  g <- ggplot(mapping = aes(x, y)) +
-    geom_contour(data = topography, aes(z = z, color = after_stat(level))) +
+  g <- ggplot2::ggplot(mapping = ggplot2::aes(x, y)) +
+    ggplot2::geom_contour(
+      data = topography,
+      ggplot2::aes(z = z, color = ggplot2::after_stat(level))
+    ) +
     new_scale_color()
 
   expect_true(inherits(g,"ggplot"))
 
 })
 
+library(ggplot2)
 test_that("guides work", {
   skip_if_not_installed("vdiffr")
   # from https://github.com/eliocamp/ggnewscale/issues/25
