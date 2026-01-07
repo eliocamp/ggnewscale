@@ -37,55 +37,70 @@ rename_aes <- function(...) {
   names(aes) <- ggplot2::standardise_aes_names(names(aes))
   aes <- lapply(aes, ggplot2::standardise_aes_names)
 
-  assing_scales(names(aes)[[1]], aes[[1]])
-
   structure(aes, class = "rename_next")
 }
 
 
-assing_scales <- function(new_aes, original_aes) {
-  types <- c("continuous", "discrete")
+find_global <- function(name, env, mode = "any") {
+  if (exists(name, envir = env, mode = mode)) {
+    return(get(name, envir = env, mode = mode))
+  }
+
+  nsenv <- asNamespace("ggplot2")
+  if (exists(name, envir = nsenv, mode = mode)) {
+    return(get(name, envir = nsenv, mode = mode))
+  }
+
+  return(NULL)
+}
+
+
+find_scale <- function(new_aes, original_aes, type) {
+  og_name <- paste0("scale_", original_aes, "_", type)
+  env <- as.environment(-1)
+  og_fun <- find_global(og_name, env, "function")
+
+  if (is.null(og_fun)) {
+    return(NULL)
+  }
+
+  og_guide <- og_fun()$guide
+
+  if (is.character(og_guide)) {
+    og_guide <- find_global(paste0("guide_", og_guide), env, "function")
+  }
+
+  if ("available_aes" %in% names(formals(og_guide))) {
+    og_guide <- og_guide(available_aes = new_aes)
+  } else {
+    og_guide <- og_guide()
+  }
+
+  function(...) {
+    og_fun(
+      ...,
+      aesthetics = new_aes,
+      guide = og_guide
+    )
+  }
+}
+assing_scales <- function(new_aes, original_aes, plot) {
+  # "standard" supported types from ggplot2.
+  types <- c("continuous", "discrete", "time", "ordinal", "datetime")
 
   for (type in types) {
     name <- paste0("scale_", new_aes, "_", type)
 
     fun <- local({
       this_type <- type
-      og_fun <- get(
-        paste0("scale_", original_aes, "_", this_type),
-        mode = "function"
-      )
-
-      og_guide <- og_fun()$guide
-
-      if (is.character(og_guide)) {
-        og_guide <- get(paste0("guide_", og_guide))
-      }
-
-      function(...) {
-        og_fun(
-          ...,
-          aesthetics = new_aes,
-          guide = og_guide(available_aes = new_aes)
-        )
-      }
+      find_scale(new_aes, original_aes, this_type)
     })
 
-    # assign the new scale into the attached package environment so ggplot2 can find it
-    # This doesn't work because the package environmnet is locked.
-    ns <- as.environment("package:ggnewscale")
-
-    if (exists(name, envir = ns, inherits = FALSE)) {
-      if (bindingIsLocked(name, ns)) {
-        unlockBinding(name, ns)
-      }
-      assign(name, fun, envir = ns)
-      lockBinding(name, ns)
-    } else {
-      assign(name, fun, envir = ns)
-      lockBinding(name, ns)
-    }
+    # ggplot2 looks up scale functions in this environment
+    # https://github.com/eliocamp/ggnewscale/issues/78
+    plot@plot_env[[name]] <- fun
   }
+  return(plot)
 }
 
 
@@ -123,6 +138,7 @@ ggplot_add.clear_aes <- function(object, plot, ...) {
     class(e1) <- setdiff(class(e1), "ggplot_rename_next")
     return(e1)
   }
+
   # browser()
   rename_aes <- e1$rename_aes
   if (inherits(e2, "Layer")) {
@@ -131,6 +147,8 @@ ggplot_add.clear_aes <- function(object, plot, ...) {
       rename_aes[[1]],
       names(rename_aes)[[1]]
     )
+
+    e1 <- assing_scales(names(rename_aes)[[1]], rename_aes[[1]], e1)
   }
 
   if (inherits(e2, "Scale")) {
