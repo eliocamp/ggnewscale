@@ -42,6 +42,7 @@ rename_aes <- function(...) {
   structure(aes, class = "rename_next")
 }
 
+
 assing_scales <- function(new_aes, original_aes) {
   types <- c("continuous", "discrete")
 
@@ -71,6 +72,7 @@ assing_scales <- function(new_aes, original_aes) {
     })
 
     # assign the new scale into the attached package environment so ggplot2 can find it
+    # This doesn't work because the package environmnet is locked.
     ns <- as.environment("package:ggnewscale")
 
     if (exists(name, envir = ns, inherits = FALSE)) {
