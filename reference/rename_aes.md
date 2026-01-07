@@ -45,5 +45,10 @@ ggplot(mapping = aes(x, y)) +
   # Color scale applied to geoms added after new_scale_color()
   scale_color_viridis_c(option = "A")
 #> Warning: Ignoring unknown aesthetics: topo_colour
-
+#> Scale for colour is already present.
+#> Adding another scale for colour, which will replace the existing scale.
+#> Error in geom_contour(data = topography, aes(z = z, topo_color = stat(level))): Problem while converting geom to grob.
+#> ℹ Error occurred in the 1st layer.
+#> Caused by error in `alpha()`:
+#> ! Cannot recycle `colour` and `alpha` to a common size.
 ```
