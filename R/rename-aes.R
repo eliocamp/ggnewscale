@@ -36,8 +36,56 @@ rename_aes <- function(...) {
   aes <- list(...)
   names(aes) <- ggplot2::standardise_aes_names(names(aes))
   aes <- lapply(aes, ggplot2::standardise_aes_names)
+
+  assing_scales(names(aes)[[1]], aes[[1]])
+
   structure(aes, class = "rename_next")
 }
+
+assing_scales <- function(new_aes, original_aes) {
+  types <- c("continuous", "discrete")
+
+  for (type in types) {
+    name <- paste0("scale_", new_aes, "_", type)
+
+    fun <- local({
+      this_type <- type
+      og_fun <- get(
+        paste0("scale_", original_aes, "_", this_type),
+        mode = "function"
+      )
+
+      og_guide <- og_fun()$guide
+
+      if (is.character(og_guide)) {
+        og_guide <- get(paste0("guide_", og_guide))
+      }
+
+      function(...) {
+        og_fun(
+          ...,
+          aesthetics = new_aes,
+          guide = og_guide(available_aes = new_aes)
+        )
+      }
+    })
+
+    # assign the new scale into the attached package environment so ggplot2 can find it
+    ns <- as.environment("package:ggnewscale")
+
+    if (exists(name, envir = ns, inherits = FALSE)) {
+      if (bindingIsLocked(name, ns)) {
+        unlockBinding(name, ns)
+      }
+      assign(name, fun, envir = ns)
+      lockBinding(name, ns)
+    } else {
+      assign(name, fun, envir = ns)
+      lockBinding(name, ns)
+    }
+  }
+}
+
 
 #' @export
 #' @rdname rename_aes
