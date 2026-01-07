@@ -2,6 +2,14 @@
 
 ## ggnewscale (development version)
 
+### Internals
+
+- Implemented a new method of adding scales that should be faster.
+  Instead of building the whole plot to let ggplot2 discover the default
+  scales, ggnewscale now creates default scales for the new aes. This
+  should lead to performance improvement
+  ([\#78](https://github.com/eliocamp/ggnewscale/issues/78))
+
 ### Bugfixes
 
 - Fixes a bug that removed guides in some cases

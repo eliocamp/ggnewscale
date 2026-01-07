@@ -44,5 +44,6 @@ ggplot(mapping = aes(x, y)) +
   geom_point(data = measurements, size = 3, aes(colour = thing)) +
   # Color scale applied to geoms added after new_scale_color()
   scale_color_viridis_c(option = "A")
-#> Error in assign(name, fun, envir = ns): cannot add bindings to a locked environment
+#> Warning: Ignoring unknown aesthetics: topo_colour
+
 ```

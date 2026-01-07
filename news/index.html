@@ -34,6 +34,10 @@
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="development version" id="ggnewscale-development-version">ggnewscale (development version)<a class="anchor" aria-label="anchor" href="#ggnewscale-development-version"></a></h2>
 <div class="section level3">
+<h3 id="internals-development-version">Internals<a class="anchor" aria-label="anchor" href="#internals-development-version"></a></h3>
+<ul><li>Implemented a new method of adding scales that should be faster. Instead of building the whole plot to let ggplot2 discover the default scales, ggnewscale now creates default scales for the new aes. This should lead to performance improvement (<a href="https://github.com/eliocamp/ggnewscale/issues/78" class="external-link">#78</a>)</li>
+</ul></div>
+<div class="section level3">
 <h3 id="bugfixes-development-version">Bugfixes<a class="anchor" aria-label="anchor" href="#bugfixes-development-version"></a></h3>
 <ul><li>Fixes a bug that removed guides in some cases (<a href="https://github.com/eliocamp/ggnewscale/issues/72" class="external-link">#72</a>)</li>
 </ul></div>
