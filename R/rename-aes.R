@@ -21,7 +21,7 @@
 #'                            thing = rnorm(30))
 #'
 #' ggplot(mapping = aes(x, y)) +
-#'   rename_aes(color = "topo_color") +
+#'   rename_aes(topo_color  = "color") +
 #'   geom_contour(data = topography, aes(z = z, topo_color = stat(level))) +
 #'   # Color scale for topography
 #'   scale_color_viridis_c(option = "D") +
@@ -78,16 +78,16 @@ ggplot_add.clear_aes <- function(object, plot, ...) {
   if (inherits(e2, "Layer")) {
     e2 <- bump_aes_layer(
       layer = e2,
-      names(rename_aes)[[1]],
-      rename_aes[[1]]
+      rename_aes[[1]],
+      names(rename_aes)[[1]]
     )
   }
 
   if (inherits(e2, "Scale")) {
     e2 <- bump_aes_scale(
       e2,
-      names(rename_aes)[[1]],
-      rename_aes[[1]]
+      rename_aes[[1]],
+      names(rename_aes)[[1]]
     )
   }
 
