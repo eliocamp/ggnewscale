@@ -35,7 +35,7 @@ measurements <- data.frame(x = runif(30, 1, 80),
                            thing = rnorm(30))
 
 ggplot(mapping = aes(x, y)) +
-  rename_aes(color = "topo_color") +
+  rename_aes(topo_color  = "color") +
   geom_contour(data = topography, aes(z = z, topo_color = stat(level))) +
   # Color scale for topography
   scale_color_viridis_c(option = "D") +
@@ -44,11 +44,5 @@ ggplot(mapping = aes(x, y)) +
   geom_point(data = measurements, size = 3, aes(colour = thing)) +
   # Color scale applied to geoms added after new_scale_color()
   scale_color_viridis_c(option = "A")
-#> Warning: Ignoring unknown aesthetics: topo_colour
-#> Scale for colour is already present.
-#> Adding another scale for colour, which will replace the existing scale.
-#> Error in geom_contour(data = topography, aes(z = z, topo_color = stat(level))): Problem while converting geom to grob.
-#> ℹ Error occurred in the 1st layer.
-#> Caused by error in `alpha()`:
-#> ! Cannot recycle `colour` and `alpha` to a common size.
+#> Error in assign(name, fun, envir = ns): cannot add bindings to a locked environment
 ```
