@@ -2,6 +2,11 @@
 
 ## ggnewscale (development version)
 
+### Bugfixes
+
+- Fixes a bug that removed guides in some cases
+  ([\#72](https://github.com/eliocamp/ggnewscale/issues/72))
+
 ## ggnewscale 0.5.2
 
 CRAN release: 2025-06-20
