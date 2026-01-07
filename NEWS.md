@@ -1,5 +1,9 @@
 # ggnewscale (development version)
 
+## Bugfixes
+
+-   Fixes a bug that removed guides in some cases (#72)
+
 # ggnewscale 0.5.2
 
 Adds compatibility with ggplot2 4.0.0

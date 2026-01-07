@@ -36,7 +36,17 @@ test_that("guides work", {
     guides(color = guide_legend(ncol = 1, nrow = 4, order = 1))
 
   vdiffr::expect_doppelganger("guides outisde of scales", g)
+
+  # from https://github.com/eliocamp/ggnewscale/issues/72
+  g <- ggplot(mapping = aes(x, y)) +
+    geom_contour(data = topography, aes(z = z, color = after_stat(level))) +
+    scale_color_viridis_c(option = "D") +
+    guides(color = guide_colorbar(direction = 'horizontal')) +
+    new_scale_color()
+
+  vdiffr::expect_doppelganger("Change orientation", g)
 })
+
 
 test_that("doesn't do partial matching", {
   skip_if_not_installed("vdiffr")
