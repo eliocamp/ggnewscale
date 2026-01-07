@@ -38,11 +38,20 @@ test_that("guides work", {
   vdiffr::expect_doppelganger("guides outisde of scales", g)
 
   # from https://github.com/eliocamp/ggnewscale/issues/72
-  g <- ggplot(mapping = aes(x, y)) +
-    geom_contour(data = topography, aes(z = z, color = after_stat(level))) +
-    scale_color_viridis_c(option = "D") +
-    guides(color = guide_colorbar(direction = 'horizontal')) +
-    new_scale_color()
+
+  g <- ggplot(head(iris, 10), aes(Sepal.Length, Sepal.Width)) +
+    geom_point(aes(color = factor(Petal.Length))) +
+    guides(
+      color = guide_legend(
+        direction = 'horizontal',
+        ncol = 2,
+        nrow = 2,
+        order = 0
+      )
+    ) +
+    new_scale_colour() +
+    geom_point(aes(color = factor(Petal.Width))) +
+    guides(color = guide_legend(ncol = 1, nrow = 4, order = 1))
 
   vdiffr::expect_doppelganger("Change orientation", g)
 })
